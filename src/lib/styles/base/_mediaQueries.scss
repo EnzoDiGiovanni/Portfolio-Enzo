@@ -1,0 +1,77 @@
+@media screen and (max-width: 1024px) {
+  .cards__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .illustration__team,
+  .illustration__bug {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  main .about_me {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+  }
+
+  main .about_me ul {
+    justify-content: center;
+  }
+  main .about_me ul li:nth-child(odd),
+  main .about_me ul li:nth-child(even) {
+    margin: 0;
+    width: 400px;
+    text-align: center;
+  }
+
+  .card_info {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .cards__container .card {
+    width: 75%;
+    height: 600px;
+  }
+
+  .cards__container .card .wrapper h4 {
+    text-align: center;
+  }
+
+  .cards__container .card .wrapper img {
+    display: none;
+  }
+
+  .cards__container .card .card__button {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards__container .card .stack__used ul {
+    gap: 15px;
+    margin: 10px 0;
+  }
+
+  .cards__container .card .stack__used {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .web,
+  .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  main .skills .skillsContainer {
+    gap: 10px;
+  }
+}

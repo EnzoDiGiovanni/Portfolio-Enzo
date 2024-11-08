@@ -1,0 +1,51 @@
+:root {
+  --background: #fffcfc;
+  --interactive: #ffcdce;
+  --border-separator: #f4a9aa;
+  --ring: #eb8e90;
+  --button: #e5484d;
+  --bubble: #dc3e42;
+  --secondary-text: #ce2c31;
+  --high-contrast-text: #641723;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  position: relative;
+  min-height: 100%;
+  background-color: var(--background);
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+h2 {
+  animation: reveal linear;
+  animation-timeline: view();
+  animation-range-start: cover 0%;
+  animation-range-end: contain 50%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: white;
+}
+
+a,
+p {
+  text-decoration: none;
+  color: white;
+}
