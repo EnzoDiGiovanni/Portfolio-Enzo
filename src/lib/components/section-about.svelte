@@ -33,6 +33,93 @@
     height: 1500px;
     justify-content: space-evenly;
 
+    .card_info {
+      position: sticky;
+      top: 200px;
+      height: 580px;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid var(--border-separator);
+      border-radius: 24px;
+      box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.2),
+        0 6px 6px rgba(0, 0, 0, 0.3);
+      justify-content: space-evenly;
+      padding: 20px;
+
+      p {
+        color: var(--secondary-text);
+        border: 1px solid var(--border-separator);
+        padding: 15px;
+        width: 100%;
+
+        box-shadow:
+          0 10px 20px rgba(0, 0, 0, 0.2),
+          0 6px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      img {
+        border: 1px solid var(--interactive);
+        padding: 15px;
+        width: 150px;
+        border-radius: 16px;
+        box-shadow:
+          0 10px 20px rgba(0, 0, 0, 0.2),
+          0 6px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .card_info-rs {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+
+        .button {
+          --b: 3px; /* border thickness */
+          --s: 0.45em; /* size of the corner */
+          --color: var(--button);
+
+          padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+          color: var(--ring);
+          --_p: var(--s);
+          background: conic-gradient(
+              from 90deg at var(--b) var(--b),
+              #0000 90deg,
+              var(--ring) 0
+            )
+            var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+            calc(100% - var(--b) - 2 * var(--_p));
+          transition:
+            0.3s linear,
+            color 0s,
+            background-color 0s;
+          outline: var(--b) solid #0000;
+          outline-offset: 0.6em;
+          font-size: 16px;
+
+          border: 0;
+
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+          --_p: 0px;
+          outline-color: var(--color);
+          outline-offset: 0.05em;
+        }
+
+        .button:active {
+          background: var(--color);
+          color: var(--interactive);
+        }
+      }
+    }
+
     ul {
       display: flex;
       flex-direction: column;

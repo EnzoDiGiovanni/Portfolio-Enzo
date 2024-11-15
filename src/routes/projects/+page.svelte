@@ -1,12 +1,67 @@
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rerum
-  accusantium autem placeat sapiente mollitia beatae dolor magnam similique sint
-  iste doloremque voluptate quo, quam commodi quis quae rem minima ex.
-  Laudantium accusamus sequi deleniti eius ad quas neque modi tempore reiciendis
-  dolorum exercitationem repudiandae at expedita ex nihil pariatur blanditiis
-  enim nostrum optio voluptate, eveniet, id cum, delectus quisquam. Culpa
-  dolorum accusantium odit odio doloremque labore qui error quo vero laudantium
-  animi, aliquam placeat modi quasi? Quibusdam consequatur qui unde iure
-  voluptates ea! Dolor, amet? Quidem, ducimus aut cum vel exercitationem tenetur
-  maxime corporis, deleniti praesentium sunt quasi soluta.
-</p>
+<script>
+  import ProjectCard from "$lib/components/project-card.svelte";
+</script>
+
+<div class="projects-presentation">
+  <h2>Projets</h2>
+  <p>Découvrez chaque projet du plus basique au plus compliqué</p>
+</div>
+
+<div class="projects-filter">
+  <ul>
+    <li><a href="#">Projets Perso</a></li>
+    <li><a href="#">Projets d'école</a></li>
+  </ul>
+</div>
+
+<div class="projects-section">
+  <ProjectCard
+    title="mon projet"
+    desc="premier projet"
+    imgSrc="/images/pokedex.webp"
+  />
+  <ProjectCard
+    title="mon projet"
+    desc="premier projet"
+    imgSrc="/images/pokedex.webp"
+  />
+  <ProjectCard
+    title="mon projet"
+    desc="premier projet"
+    imgSrc="/images/pokedex.webp"
+  />
+  <ProjectCard
+    title="mon projet"
+    desc="premier projet"
+    imgSrc="/images/pokedex.webp"
+  />
+</div>
+
+<style lang="scss">
+  .projects-presentation {
+    padding-top: 200px;
+
+    h2,
+    p {
+      padding: 0 60px 60px 60px;
+    }
+  }
+
+  .projects-filter {
+    border: 1px solid var(--ring);
+    color: var(--secondary-text);
+    padding: 30px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  }
+
+  .projects-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+</style>
