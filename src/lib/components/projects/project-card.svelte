@@ -57,11 +57,13 @@
 
     .card-title {
       h2 {
+        color: var(--high-contrast-text);
         margin-top: 30px;
         text-align: center;
       }
 
       p {
+        color: var(--secondary-text);
         text-align: center;
         margin-bottom: 30px;
       }

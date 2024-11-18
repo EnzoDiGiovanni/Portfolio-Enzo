@@ -1,11 +1,11 @@
 <!-- src/routes/+page.svelte -->
 <script>
-  import Homepage from "$lib/components/homepage.svelte";
+  import Homepage from "$lib/components/home/homepage.svelte";
   import Elements from "$lib/components/min-elements.svelte";
-  import SectionAbout from "$lib/components/section-about.svelte";
-  import SectionContact from "$lib/components/section-contact.svelte";
-  import SectionProjects from "$lib/components/section-projects.svelte";
-  import SectionSkills from "$lib/components/section-skills.svelte";
+  import SectionAbout from "$lib/components/about/section-about.svelte";
+  import SectionContact from "$lib/components/contact/section-contact.svelte";
+  import SectionProjects from "$lib/components/projects/section-projects.svelte";
+  import SectionSkills from "$lib/components/skills/section-skills.svelte";
 </script>
 
 <Elements />

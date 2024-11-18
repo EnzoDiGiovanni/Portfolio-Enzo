@@ -1,17 +1,17 @@
 // Thèmes
 
-@import "./themes/dark-mode";
+@use "./themes/dark-mode";
 
 // Réinitialisation et typographie de base
-@import "./base/reset";
-@import "./base/typography";
+@use "./base/reset";
+@use "./base/typography";
 
 // Composants
-@import "./components/animation";
+@use "./components/animation";
 
-@import "./components/elements";
+@use "./components/elements";
 
-@import "./base/mediaQueries";
+@use "./base/mediaQueries";
 
 :root {
   scroll-behavior: smooth;

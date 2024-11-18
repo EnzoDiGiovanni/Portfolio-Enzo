@@ -31,7 +31,7 @@ ul {
 }
 
 h2 {
-  animation: reveal linear;
+  animation: title_reveal linear;
   animation-timeline: view();
   animation-range-start: cover 0%;
   animation-range-end: contain 50%;

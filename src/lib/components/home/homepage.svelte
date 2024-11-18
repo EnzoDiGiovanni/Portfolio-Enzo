@@ -1,4 +1,10 @@
 <script>
+  import { onMount } from "svelte";
+  import { animLine } from "../../utils/anime.js";
+
+  onMount(() => {
+    animLine();
+  });
 </script>
 
 <div class="home_page">

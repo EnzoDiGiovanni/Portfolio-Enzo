@@ -1,37 +1,9 @@
-@keyframes spin {
+@keyframes compass_spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes anim-to {
-  0% {
-    bottom: -80px;
-  }
-  50% {
-    bottom: 100px;
-    width: 200px;
-  }
-  100% {
-    bottom: -30px;
-    width: 250px;
-  }
-}
-
-@keyframes anim-back {
-  0% {
-    bottom: 0px;
-    width: 250px;
-  }
-  50% {
-    bottom: 100px;
-    width: 200px;
-  }
-  100% {
-    bottom: -80px;
   }
 }
 
@@ -62,72 +34,13 @@
   }
 }
 
-@keyframes animate {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-@keyframes animate2 {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: -1000px;
-  }
-}
-
-@keyframes vibrate {
-  0% {
-    transform: rotate(0);
-  }
-  20% {
-    transform: rotate(10deg);
-  }
-  40% {
-    transform: rotate(-10deg);
-  }
-  60% {
-    transform: rotate(8deg);
-  }
-  80% {
-    transform: rotate(-8deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
-@keyframes scroll {
-  from {
-    background-size: 0% 5px;
-  }
-  to {
-    background-size: 100% 5px;
-  }
-}
-
-@keyframes reveal {
+@keyframes title_reveal {
   from {
     transform: scale(0);
     opacity: 0;
   }
   to {
     transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes revealSlide {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
     opacity: 1;
   }
 }

@@ -1,5 +1,2 @@
 <script>
 </script>
-
-<style>
-</style>

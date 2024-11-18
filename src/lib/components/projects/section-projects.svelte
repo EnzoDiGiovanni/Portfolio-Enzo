@@ -1,10 +1,13 @@
 <script>
-  import ProjectCard from "$lib/components/projects/project-card.svelte";
+  import ProjectCard from "./project-card.svelte";
 </script>
 
 <div class="projects-presentation">
   <h2>Projets</h2>
-  <p>Découvrez chaque projet du plus basique au plus compliqué</p>
+  <p>
+    Découvrez mes projets avec les différentes technologies / langages que
+    j'aime utiliser !
+  </p>
 </div>
 
 <div class="projects-filter">
@@ -16,33 +19,27 @@
 
 <div class="projects-section">
   <ProjectCard
-    title="mon projet"
-    desc="premier projet"
+    title="Pokedex"
+    desc="Pokdex créer en Svelte "
     imgSrc="/images/pokedex.webp"
   />
   <ProjectCard
-    title="mon projet"
-    desc="premier projet"
-    imgSrc="/images/pokedex.webp"
-  />
-  <ProjectCard
-    title="mon projet"
-    desc="premier projet"
-    imgSrc="/images/pokedex.webp"
-  />
-  <ProjectCard
-    title="mon projet"
-    desc="premier projet"
-    imgSrc="/images/pokedex.webp"
+    title="Arcade Games"
+    desc="Site de jeu les plus connu tout en JavaScript"
+    imgSrc="/images/arcadegame.webp"
   />
 </div>
 
 <style lang="scss">
   .projects-presentation {
-    padding-top: 200px;
+    margin-top: 100px;
+    h2 {
+      text-align: center;
+    }
 
     h2,
     p {
+      color: var(--high-contrast-text);
       padding: 0 60px 60px 60px;
     }
   }

@@ -12,7 +12,6 @@
 
   function toggleDarkMode() {
     isDarkMode = !isDarkMode;
-    console.log(isDarkMode);
 
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
@@ -47,6 +46,11 @@
     position: fixed;
     top: 110px;
     right: 30px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     i {
       color: var(--secondary-text);
