@@ -2,33 +2,40 @@
   import ProjectCard from "./project-card.svelte";
 </script>
 
-<div class="projects-presentation">
-  <h2>Projets</h2>
-  <p>
-    Découvrez mes projets avec les différentes technologies / langages que
-    j'aime utiliser !
-  </p>
-</div>
+<section id="#projects">
+  <div class="projects-presentation">
+    <h2>Projets</h2>
+    <p>
+      Découvrez mes projets avec les différentes technologies / langages que
+      j'aime utiliser !
+    </p>
+  </div>
 
-<div class="projects-filter">
-  <ul>
-    <li><a href="#">Projets Perso</a></li>
-    <li><a href="#">Projets d'école</a></li>
-  </ul>
-</div>
+  <div class="projects-filter">
+    <ul>
+      <!-- <li><a href="#">Projets Perso</a></li>
+    <li><a href="#">Projets d'école</a></li> -->
+      <p>À faire</p>
+    </ul>
+  </div>
 
-<div class="projects-section">
-  <ProjectCard
-    title="Pokedex"
-    desc="Pokdex créer en Svelte "
-    imgSrc="/images/pokedex.webp"
-  />
-  <ProjectCard
-    title="Arcade Games"
-    desc="Site de jeu les plus connu tout en JavaScript"
-    imgSrc="/images/arcadegame.webp"
-  />
-</div>
+  <div class="projects-section">
+    <a href="/projects/pokedex">
+      <ProjectCard
+        title="Pokédex"
+        desc="Pokédex créé en Svelte"
+        imgSrc="/images/pokedex.webp"
+      />
+    </a>
+    <a href="/projects/arcade">
+      <ProjectCard
+        title="Arcade Games"
+        desc="Site de jeux connus, réalisé avec JavaScript"
+        imgSrc="/images/arcadegame.webp"
+      />
+    </a>
+  </div>
+</section>
 
 <style lang="scss">
   .projects-presentation {

@@ -1,0 +1,18 @@
+{
+  "pokedex": {
+    "title": "Pokédex",
+    "date": "2024",
+    "link": "https://tyradex.tech/",
+    "desc": "Pokédex créé en Svelte",
+    "imgSrc": "/images/pokedex.webp",
+    "technos": ["HTML", "SCSS", "Svelte", "API"]
+  },
+  "arcade": {
+    "title": "Arcade Games",
+    "date": "2024",
+    "link": "https://example.com/",
+    "desc": "Site de jeux connus, réalisé avec JavaScript",
+    "imgSrc": "/images/arcadegame.webp",
+    "technos": ["HTML", "SCSS", "JavaScript"]
+  }
+}

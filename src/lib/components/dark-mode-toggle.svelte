@@ -43,9 +43,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 110px;
-    right: 30px;
+    // position: fixed;
+    // top: 110px;
+    // right: 30px;
     transition: transform 0.2s;
 
     &:hover {

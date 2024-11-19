@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import DarkModeToggle from "./dark-mode-toggle.svelte";
 
   let activeLink = null;
@@ -10,39 +9,25 @@
   const toggleSideNav = () => {
     sideNavOpen = !sideNavOpen;
   };
-
-  const addBorderOnScroll = () => {
-    if (window.scrollY > 50) {
-      header.style.boxShadow = "0px 29px 21px -8px rgba(0, 0, 0, 0.1)";
-    } else {
-      header.style.boxShadow = "none";
-    }
-  };
-
-  onMount(() => {
-    window.addEventListener("scroll", addBorderOnScroll);
-
-    return () => {
-      window.removeEventListener("scroll", addBorderOnScroll);
-    };
-  });
 </script>
 
 <header bind:this={header}>
-  <DarkModeToggle />
-
   <nav class="container">
     <a href="/">
       <img src="/images/logo_edg.svg" class="logo" alt="logo" />
     </a>
 
-    <button
-      class="burger-menu"
-      on:click={toggleSideNav}
-      aria-label="Toggle navigation"
-    >
-      <i class="fa-regular fa-compass"></i>
-    </button>
+    <div class="wrapper">
+      <DarkModeToggle />
+
+      <button
+        class="burger-menu"
+        on:click={toggleSideNav}
+        aria-label="Toggle navigation"
+      >
+        <i class="fa-regular fa-compass"></i>
+      </button>
+    </div>
 
     <div class="side_nav" class:open={sideNavOpen}>
       <ul class="nav_links">
@@ -68,8 +53,6 @@
 
 <style lang="scss">
   header {
-    // backdrop-filter: blur(10px);
-
     z-index: 1000;
     position: fixed;
     top: 0;
@@ -88,6 +71,11 @@
         width: 70px;
         transition: transform 0.5s ease-out;
         cursor: pointer;
+      }
+
+      .wrapper {
+        display: flex;
+        gap: 20px;
       }
 
       .burger-menu {
