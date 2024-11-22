@@ -5,7 +5,9 @@
     "link": "https://tyradex.tech/",
     "desc": "Pokédex créé en Svelte",
     "imgSrc": "/images/pokedex.webp",
-    "technos": ["HTML", "SCSS", "Svelte", "API"]
+    "technos": ["HTML", "SCSS", "Svelte", "API"],
+    "about": "Créer un Pokedex était le meilleur moyen pour moi d'apprendre à utiliser Svelte et les calls API. ",
+    "tags": ["Projet personnel", "API", "Développement web"]
   },
   "arcade": {
     "title": "Arcade Games",
@@ -13,6 +15,7 @@
     "link": "https://example.com/",
     "desc": "Site de jeux connus, réalisé avec JavaScript",
     "imgSrc": "/images/arcadegame.webp",
-    "technos": ["HTML", "SCSS", "JavaScript"]
+    "technos": ["HTML", "SCSS", "JavaScript"],
+    "about": "Étant fan des vieux jeux d'arcade et des jeux ayant marqué les gens, j'ai créé ce site pour entraîner mon JavaScript et pour me faire plaisir "
   }
 }

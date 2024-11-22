@@ -37,14 +37,16 @@
     padding: 155px 120px 120px 120px;
 
     h2 {
+      color: var(--high-contrast-text);
       text-align: center;
     }
 
     p {
+      color: var(--secondary-text);
       font-size: xx-large;
       padding: 0 0 30px 0;
       margin: 40px 0;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid var(--border-separator);
       border-width: 2px;
     }
 

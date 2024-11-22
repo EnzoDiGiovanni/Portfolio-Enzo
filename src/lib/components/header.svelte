@@ -32,18 +32,18 @@
     <div class="side_nav" class:open={sideNavOpen}>
       <ul class="nav_links">
         <li class:active={activeLink === "projets"}>
-          <a href="#projects" on:click={() => handleNavClick("projets")}>
-            PROJETS
+          <a href="#projects">
+            PROJETS <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
         <li class:active={activeLink === "competences"}>
-          <a href="#competence" on:click={() => handleNavClick("competences")}>
-            COMPÉTENCES
+          <a href="#competence">
+            COMPÉTENCES <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
         <li class:active={activeLink === "contact"}>
-          <a href="#contact" on:click={() => handleNavClick("contact")}>
-            ME CONTACTER
+          <a href="#contact">
+            ME CONTACTER <i class="fa-solid fa-arrow-right"></i>
           </a>
         </li>
       </ul>
@@ -108,7 +108,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(255, 255, 255, 0.1);
+      background-color: var(--background);
       transition: 0.5s;
       backdrop-filter: blur(10px);
       height: 100%;
@@ -119,31 +119,46 @@
       }
 
       .nav_links {
+        padding: 40px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        gap: 130px;
+        flex-direction: column;
+        width: 100%;
         height: 100%;
 
         li {
-          width: 100%;
           padding: 30px;
           text-align: center;
           transition: box-shadow 0.3s ease;
           position: relative;
+          overflow: hidden;
 
           span {
             cursor: default;
           }
 
-          &:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-          }
-
           a {
+            display: block;
             color: var(--secondary-text);
             transition: color 0.65s ease;
             font-size: 20px;
+            width: 100%;
+
+            .fa-arrow-right {
+              transition: all 0.2s ease;
+              transform: rotate(320deg);
+              visibility: hidden;
+              opacity: 0;
+
+              transform: translate(30px, 0px);
+              rotate: 320deg;
+            }
+
+            &:hover .fa-arrow-right {
+              visibility: visible;
+              opacity: 1;
+              transform: translate(0, 0);
+            }
           }
         }
       }

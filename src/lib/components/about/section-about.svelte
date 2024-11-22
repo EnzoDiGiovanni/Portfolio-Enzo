@@ -63,6 +63,7 @@ J'aime également apprendre toutes sortes de choses et sur  n'importe quel sujet
     min-height: 100vh;
 
     h2 {
+      color: var(--high-contrast-text);
       text-align: center;
       margin-bottom: 100px;
     }

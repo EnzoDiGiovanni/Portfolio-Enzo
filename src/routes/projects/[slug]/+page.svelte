@@ -19,15 +19,30 @@
       <p>{project.date}</p>
     </div>
 
-    <div class="imgProject">
-      <img src={project.imgSrc} alt="" />
+    <div class="wrapper">
+      <div class="imgProject">
+        <img src={project.imgSrc} alt="" />
+      </div>
+
+      <ul class="technos">
+        {#each project.technos as techno}
+          <li>{techno}</li>
+        {/each}
+      </ul>
     </div>
 
-    <ul class="technos">
-      {#each project.technos as techno}
-        <li>{techno}</li>
-      {/each}
-    </ul>
+    <div class="wrapper-description">
+      <div class="projectType">
+        <ul>
+          {#each project.tags as tag}
+            <li>{tag}</li>
+          {/each}
+        </ul>
+      </div>
+      <div class="description">
+        <p>{project.about}</p>
+      </div>
+    </div>
   {:else}
     <p>Projet non trouvé</p>
   {/if}
@@ -113,9 +128,60 @@
       justify-content: space-between;
     }
 
-    .imgProject {
-      img {
-        width: 100%;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid var(--border-separator);
+      overflow: hidden;
+
+      .imgProject {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .technos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        flex: 1;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid var(--border-separator);
+          height: 100%;
+          width: 100%;
+          color: var(--secondary-text);
+        }
+      }
+    }
+
+    .wrapper-description {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+
+      .projectType {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          li {
+            color: var(--secondary-text);
+          }
+        }
+      }
+
+      .description {
+        width: 460px;
       }
     }
   }
