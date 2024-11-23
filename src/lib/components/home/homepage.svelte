@@ -1,14 +1,13 @@
 <script>
+  import { animLine } from "$lib/utils/anime.js";
   import { onMount } from "svelte";
-  import { animLine } from "../../utils/anime.js";
 
   onMount(() => {
     animLine();
   });
 </script>
 
-<div class="home_page">
-  <p>Je suis</p>
+<div class="home-page">
   <h1>
     <svg
       id="Calque_1"
@@ -77,17 +76,49 @@
     </svg>
   </h1>
 
-  <p>Bienvenue sur mon portfolio ! <span>👋🏽</span></p>
+  <section class="info-section">
+    <div class="location">
+      <i class="fa-solid fa-location-dot"></i>
+      <p>Lyon, Fr</p>
+    </div>
+    <div class="availability">
+      <p>Disponible pour travailler</p>
+      <span class="status-indicator" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <p class="role">Développeur Web</p>
+    <div class="social-links">
+      <a
+        href="https://www.linkedin.com/in/enzodigiovanni/"
+        aria-label="Lien vers mon profil LinkedIn"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a
+        href="https://github.com/EnzoDiGiovanni"
+        aria-label="Lien vers mon profil Github"
+      >
+        <i class="fa-brands fa-square-github"></i>
+      </a>
+    </div>
+  </section>
+
+  <p class="welcome-message">
+    Bienvenue sur mon portfolio ! <span class="wave-emoji">👋🏽</span>
+  </p>
 </div>
 
 <style lang="scss">
-  .home_page {
+  .home-page {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-direction: column;
     height: 100vh;
+    gap: 20px;
 
     h1 {
       margin: 30px 0 10px 0;
@@ -99,13 +130,105 @@
     }
 
     p {
+      color: var(--secondary-text);
+      font-size: x-large;
+    }
+
+    .info-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        i {
+          font-size: 30px;
+          color: var(--button);
+        }
+      }
+
+      .availability {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--border-separator);
+        padding: 20px;
+        border-radius: 50px;
+        gap: 30px;
+
+        p {
+          font-size: 1rem;
+        }
+
+        .status-indicator {
+          position: relative;
+          background-color: var(--workBtn);
+          border-radius: 10px;
+          font-weight: 500;
+          height: 10px;
+          width: 10px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: inherit;
+            background-color: var(--workBtn);
+            animation: ping 1s ease-out infinite;
+          }
+        }
+      }
+    }
+
+    .profile-section {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .social-links {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition:
+            transform 0.3s ease,
+            color 0.3s ease;
+
+          &:hover {
+            transform: scale(1.2);
+            color: var(--hover-color);
+          }
+
+          .fa-brands {
+            font-size: 2rem;
+            color: var(--button);
+          }
+        }
+      }
+    }
+
+    .welcome-message {
       display: flex;
       align-items: center;
       gap: 15px;
       font-size: x-large;
       color: var(--secondary-text);
 
-      span {
+      .wave-emoji {
         font-size: 50px;
         cursor: pointer;
         display: inline-block;

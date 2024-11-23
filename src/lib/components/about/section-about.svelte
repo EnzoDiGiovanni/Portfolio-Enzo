@@ -2,20 +2,20 @@
   import CardInfo from "./about-card.svelte";
 </script>
 
-<section class="about_me">
+<section class="about-section">
   <h2>À propos de moi !</h2>
 
-  <div class="wrapper">
-    <div class="about_me--image">
+  <div class="content-wrapper">
+    <div class="profile-image">
       <img
-        class="profilPic"
+        class="profile-picture"
         src="/images/profilpic.webp"
         loading="lazy"
-        alt="Profil Pic"
+        alt="Profil d'Enzo Di Giovanni"
       />
     </div>
 
-    <div class="about_me--cards">
+    <div class="info-cards">
       <CardInfo
         title="Bonjour je m'appelle Enzo Di Giovanni"
         ,
@@ -27,6 +27,7 @@
         desc="J'ai décidé de changer complètement de domaine après 2 ans de marketing et apprendre le développement web !
 Aujourd'hui, ça fait 2 ans que je code en autodidacte et à l'école  👨🏽‍💻"
       />
+
       <CardInfo
         title="Ce que j'aime dans la vie ?"
         ,
@@ -59,7 +60,7 @@ J'aime également apprendre toutes sortes de choses et sur  n'importe quel sujet
 </section>
 
 <style lang="scss">
-  .about_me {
+  .about-section {
     min-height: 100vh;
 
     h2 {
@@ -67,26 +68,27 @@ J'aime également apprendre toutes sortes de choses et sur  n'importe quel sujet
       text-align: center;
       margin-bottom: 100px;
     }
-    .wrapper {
+
+    .content-wrapper {
       position: relative;
       display: flex;
 
       justify-content: center;
       gap: 25%;
 
-      .about_me--image {
+      .profile-image {
         position: sticky;
         top: 35%;
         left: 0;
         height: 100%;
         width: 300px;
 
-        .profilPic {
+        .profile-picture {
           width: 100%;
         }
       }
 
-      .about_me--cards {
+      .info-cards {
         margin-top: 200px;
         display: flex;
         flex-direction: column;
