@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<form name="contact" netlify method="POST">
+<form name="contact" netlify method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
   <p>
     <label>Votre nom : <input type="text" name="name" /></label>

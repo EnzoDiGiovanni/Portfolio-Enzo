@@ -34,13 +34,13 @@
         imgSrc="/images/arcadegame.webp"
       />
     </a>
-    <a href="/projects/myBookList" aria-label="Détails du projet My Book List">
+    <!-- <a href="/projects/myBookList" aria-label="Détails du projet My Book List">
       <ProjectCard
         title="My Book List"
         desc="Application mobile pour amateur de livres !"
         imgSrc="/images/arcadegame.webp"
       />
-    </a>
+    </a> -->
   </div>
 </section>
 
