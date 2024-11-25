@@ -34,6 +34,13 @@
         imgSrc="/images/arcadegame.webp"
       />
     </a>
+    <a href="/projects/myBookList" aria-label="Détails du projet My Book List">
+      <ProjectCard
+        title="My Book List"
+        desc="Application mobile pour amateur de livres !"
+        imgSrc="/images/arcadegame.webp"
+      />
+    </a>
   </div>
 </section>
 
@@ -94,7 +101,7 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(2, minmax(250px, 1fr));
       gap: 20px;
 
       a {
@@ -104,6 +111,15 @@
         &:hover {
           transform: scale(1.05);
         }
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+      }
+
+      @media (max-width: 480px) {
+        gap: 10px;
+        grid-template-columns: 1fr;
       }
     }
   }

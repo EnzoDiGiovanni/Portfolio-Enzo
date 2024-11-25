@@ -16,6 +16,7 @@
 
     <div class="description">
       <p>{project.desc}</p>
+      <a href={project.gitSrc} target="_blank">Voir le GitHub</a>
       <p>{project.date}</p>
     </div>
 
@@ -49,9 +50,7 @@
 </section>
 
 <style lang="scss">
-  h2,
-  h3,
-  h4 {
+  h3 {
     color: var(--high-contrast-text);
   }
 
@@ -70,6 +69,38 @@
     height: 5000px;
     width: 100vw;
 
+    a {
+      position: relative;
+      border: 1px solid var(--ring);
+      padding: 20px;
+      border-radius: 30px;
+      overflow: hidden;
+      z-index: 2;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--button);
+        width: 100%;
+        height: 100%;
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+        transform-origin: top;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: scaleY(1);
+      }
+      &:not(:hover)::before {
+        transform: scaleY(0);
+        transform-origin: bottom;
+      }
+    }
+
     .project__title {
       width: 100%;
       display: flex;
@@ -80,38 +111,6 @@
       h3 {
         padding: 20px;
         font-size: clamp(2rem, 10vw, 10rem);
-      }
-
-      a {
-        position: relative;
-        border: 1px solid var(--ring);
-        padding: 20px;
-        border-radius: 30px;
-        overflow: hidden;
-        z-index: 2;
-
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: var(--button);
-          width: 100%;
-          height: 100%;
-          transform: scaleY(0);
-          transition: transform 0.3s ease;
-          transform-origin: top;
-          z-index: -1;
-        }
-
-        &:hover::before {
-          transform: scaleY(1);
-        }
-        &:not(:hover)::before {
-          transform: scaleY(0);
-          transform-origin: bottom;
-        }
       }
     }
 
@@ -126,6 +125,14 @@
       margin-bottom: 40px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      a {
+        button {
+          padding: 20px;
+          cursor: pointer;
+        }
+      }
     }
 
     .wrapper {

@@ -1,7 +1,8 @@
-<!-- <script>
+<script>
 </script>
 
-<form name="contact" netlify>
+<form name="contact" netlify method="POST">
+  <input type="hidden" name="form-name" value="contact" />
   <p>
     <label>Votre nom : <input type="text" name="name" /></label>
   </p>
@@ -72,4 +73,4 @@
       }
     }
   }
-</style> -->
+</style>

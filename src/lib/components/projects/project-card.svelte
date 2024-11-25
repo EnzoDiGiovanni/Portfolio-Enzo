@@ -38,7 +38,7 @@
     justify-content: center;
     flex-direction: column;
     color: white;
-    border: 1px solid white;
+    border: 1px solid var(--border-separator);
     height: 720px;
     z-index: 2;
 
