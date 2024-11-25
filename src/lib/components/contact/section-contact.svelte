@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 </script>
 
 <form name="contact" netlify method="POST" data-netlify="true">
@@ -73,4 +73,4 @@
       }
     }
   }
-</style>
+</style> -->
