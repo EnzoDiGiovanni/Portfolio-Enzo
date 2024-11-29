@@ -40,6 +40,8 @@
     "vite": "^5.0.11"
   },
   "dependencies": {
+    "@sveltejs/adapter-netlify": "^4.3.6",
+    "@sveltejs/adapter-static": "^3.0.6",
     "animejs": "^3.2.2",
     "gsap": "^3.12.5",
     "lenis": "^1.1.16",
