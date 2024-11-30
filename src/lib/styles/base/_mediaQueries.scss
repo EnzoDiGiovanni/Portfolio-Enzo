@@ -8,6 +8,24 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+
+    .profile-image {
+      display: none;
+    }
+
+    .info-cards {
+      margin-top: 0 !important;
+      align-items: center !important;
+      gap: 150px !important;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   main .about_me {
     flex-direction: column;

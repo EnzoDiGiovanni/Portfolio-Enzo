@@ -3,15 +3,18 @@
 
 <form name="contact" id="contact" netlify method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
-  <p>
-    <label>Votre nom : <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Votre email : <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Message : <textarea name="message"></textarea></label>
-  </p>
+  <div class=" wrapper">
+
+    <p>
+      <label>Votre nom : <input type="text" name="name" placeholder="Enzo"/></label>
+    </p>
+    <p>
+      <label>Votre email : <input type="email" name="email" placeholder="Di Giovanni" /></label>
+    </p>
+  </div>
+    <p>
+      <label>Message : <textarea name="message" placeholder="La raison de votre message"></textarea></label>
+    </p>
   <p>
     <button type="submit">Envoyer</button>
   </p>
@@ -19,20 +22,31 @@
 
 <style lang="scss">
   form {
-    max-width: 500px;
+    width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background: var(--interactive);
     border-radius: 8px;
+
+    .wrapper {
+      gap: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        flex: 1;
+      }
+
+    }
 
     p {
       margin-bottom: 12px;
     }
 
+
     label {
       font-size: 14px;
       color: var(--secondary-text);
-      margin-bottom: 4px;
+      margin-bottom: 25px;
       display: block;
     }
 
@@ -50,6 +64,10 @@
         border-color: var(--ring);
         outline: none;
       }
+    }
+
+    input, textarea {
+      margin-top: 20px;
     }
 
     button {

@@ -120,6 +120,7 @@
     height: 100vh;
     gap: 20px;
 
+
     h1 {
       margin: 30px 0 10px 0;
 
@@ -131,19 +132,23 @@
 
     p {
       color: var(--secondary-text);
-      font-size: x-large;
+      font-size: clamp(16px, 5vw, 32px);
     }
 
     .info-section {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 30px;
+      flex-wrap: wrap;
 
       .location {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 15px;
+
+      
 
         i {
           font-size: 30px;
@@ -224,6 +229,8 @@
     .welcome-message {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 15px;
       font-size: x-large;
       color: var(--secondary-text);

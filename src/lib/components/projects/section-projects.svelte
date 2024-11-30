@@ -1,126 +1,146 @@
 <script>
+  import projects from "$lib/data/projects.json";
   import ProjectCard from "./project-card.svelte";
+
+let selectedTech = ""; 
+const allTechnos = [...new Set(Object.values(projects).flatMap(proj => proj.technos))];
 </script>
 
 <section id="projects" class="projects-section">
   <header class="projects-header">
     <h2>Projets</h2>
     <p>
-      Découvrez mes projets avec les différentes technologies / langages que
+      Découvrez mes projets avec les différentes technologies/langages que
       j'aime utiliser !
     </p>
   </header>
 
   <div class="projects-filter">
     <ul>
-      <!-- <li><a href="#">Projets Perso</a></li>
-    <li><a href="#">Projets d'école</a></li> -->
-      <p>À faire</p>
+      <li>
+        <button 
+          type="button"
+          on:click={() => selectedTech = ""}
+          class:selected={selectedTech === ""}
+        >
+          Tous
+        </button>
+      </li>
+      {#each allTechnos as tech}
+        <li>
+          <button 
+            type="button"
+            on:click={() => selectedTech = tech}
+            class:selected={selectedTech === tech}
+          >
+            {tech}
+          </button>
+        </li>
+      {/each}
     </ul>
   </div>
 
   <div class="projects-grid">
-    <a href="/projects/pokedex" aria-label="Détails du projet Pokédex">
-      <ProjectCard
-        title="Pokédex"
-        desc="Pokédex créé en Svelte"
-        imgSrc="/images/pokedex.webp"
-      />
-    </a>
-    <a href="/projects/arcade" aria-label="Détails du projet Arcade Games">
-      <ProjectCard
-        title="Arcade Games"
-        desc="Site de jeux connus, réalisé avec JavaScript"
-        imgSrc="/images/arcadegame.webp"
-      />
-    </a>
-    <!-- <a href="/projects/myBookList" aria-label="Détails du projet My Book List">
-      <ProjectCard
-        title="My Book List"
-        desc="Application mobile pour amateur de livres !"
-        imgSrc="/images/arcadegame.webp"
-      />
-    </a> -->
+    {#each Object.values(projects).filter(proj => 
+      !selectedTech || proj.technos.includes(selectedTech)
+    ) as project}
+      <a href={project.link} aria-label={`Détails du projet ${project.title}`}>
+        <ProjectCard
+          title={project.title}
+          desc={project.desc}
+          imgSrc={project.imgSrc}
+        />
+      </a>
+    {/each}
+   
   </div>
 </section>
 
 <style lang="scss">
-  .projects-section {
-    margin: 130px auto;
-    padding: 0 20px;
+.projects-section {
+  margin: 130px auto;
+  padding: 0 20px;
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
+     header {
+    text-align: center;
+    margin-bottom: 40px;
 
-      h2 {
-        font-size: 2rem;
-        color: var(--high-contrast-text);
-      }
-
-      p {
-        font-size: 1.2rem;
-        color: var(--secondary-text);
-        margin-top: 10px;
-      }
+    h2 {
+      font-size: 2rem;
+      color: var(--high-contrast-text);
     }
 
-    .projects-filter {
-      border: 1px solid var(--ring);
-      border-radius: 8px;
-      margin: 20px auto;
-      padding: 15px;
-      text-align: center;
+    p {
+      font-size: 1.2rem;
+      color: var(--secondary-text);
+      margin-top: 10px;
+    }
+  }
 
-      ul {
-        display: flex;
-        justify-content: space-evenly;
-        list-style: none;
-        padding: 0;
+  .projects-filter {
+    border: 1px solid var(--ring);
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
 
-        li {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 10px;
+      padding: 0;
+
+      li {
+        button {
+          background-color: transparent;
+          border: 1px solid var(--ring);
+          color: var(--secondary-text);
           padding: 10px 20px;
+          font-size: 1rem;
+          border-radius: 5px;
           cursor: pointer;
+          transition: all 0.3s ease;
 
-          a {
-            color: var(--secondary-text);
-            text-decoration: none;
+          &.selected {
+            background-color: var(--primary-text);
+            color: var(--button);
+            border-color: var(--primary-text);
+            transform: scale(1.1);
+          }
 
-            &:hover {
-              color: var(--primary-text);
-            }
+          &:hover {
+            background-color: var(--primary-hover);
+            color: white;
           }
         }
-
-        p {
-          font-style: italic;
-          color: var(--secondary-text);
-        }
-      }
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(250px, 1fr));
-      gap: 20px;
-
-      a {
-        text-decoration: none;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
-
-      @media (max-width: 768px) {
-        grid-template-columns: repeat(1, minmax(250px, 1fr));
-      }
-
-      @media (max-width: 480px) {
-        gap: 10px;
-        grid-template-columns: 1fr;
       }
     }
   }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+
+    @media (max-width: 480px) {
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
 </style>

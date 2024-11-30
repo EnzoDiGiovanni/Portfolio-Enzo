@@ -133,10 +133,6 @@
           position: relative;
           overflow: hidden;
 
-          span {
-            cursor: default;
-          }
-
           a {
             display: block;
             color: var(--secondary-text);

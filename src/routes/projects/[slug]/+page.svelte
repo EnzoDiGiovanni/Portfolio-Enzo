@@ -7,8 +7,11 @@
   {#if project}
     <div class="project__title">
       <h3>{project.title}</h3>
-      <a href={project.link} target="_blank" rel="noopener noreferrer">
+      <a href={project.gitSrc} target="_blank" rel="noopener noreferrer">
         Voir le projet
+      </a>
+      <a href="/" target="_blank" rel="noopener noreferrer">
+        Retour au projects
       </a>
     </div>
 
@@ -16,7 +19,7 @@
 
     <div class="description">
       <p>{project.desc}</p>
-      <a href={project.gitSrc} target="_blank">Voir le GitHub</a>
+    
       <p>{project.date}</p>
     </div>
 
@@ -92,7 +95,7 @@
         z-index: -1;
       }
 
-      &:hover::before {
+       &:hover::before {
         transform: scaleY(1);
       }
       &:not(:hover)::before {
@@ -127,12 +130,7 @@
       justify-content: space-between;
       align-items: center;
 
-      a {
-        button {
-          padding: 20px;
-          cursor: pointer;
-        }
-      }
+      
     }
 
     .wrapper {

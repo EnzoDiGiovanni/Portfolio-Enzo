@@ -14,8 +14,8 @@
     padding: 10%;
 
     border-radius: 10px;
-    max-width: 520px;
-    min-width: 250px;
+    max-width: 35rem;
+    min-width: 10rem;
 
     h3 {
       font-size: 2rem;

@@ -17,14 +17,14 @@
 
     <div class="info-cards">
       <CardInfo
-        title="Bonjour je m'appelle Enzo Di Giovanni"
+        title="Bonjour, je m'appelle Enzo Di Giovanni"
         ,
         desc="Un futur développeur Full-Stack ! ☄️"
       />
       <CardInfo
         title="Depuis quand je code ?"
         ,
-        desc="J'ai décidé de changer complètement de domaine après 2 ans de marketing et apprendre le développement web !
+        desc="J'ai décidé de changer complètement de domaine après 2 ans de marketing et d'apprendre le développement web !
 Aujourd'hui, ça fait 2 ans que je code en autodidacte et à l'école  👨🏽‍💻"
       />
 
@@ -32,12 +32,12 @@ Aujourd'hui, ça fait 2 ans que je code en autodidacte et à l'école  👨🏽�
         title="Ce que j'aime dans la vie ?"
         ,
         desc="J'adore le ski et les sports de combat ⛷️ 🤼
-J'aime également apprendre toutes sortes de choses et sur  n'importe quel sujet ! 🧠 "
+J'aime également apprendre toutes sortes de choses et sur n'importe quel sujet ! 🧠 "
       />
       <CardInfo
         title="Qu'est-ce que j'ai en plus ?"
         ,
-        desc="Je suis quelqu'un soucieux d'apprendre et de bien faire, je m'efforce chaque jour de proposer la meilleure version de moi-même ! 💪🏽 "
+        desc="Je suis soucieux d'apprendre et de bien faire, je m'efforce chaque jour de proposer la meilleure version de moi-même ! 💪🏽 "
       />
     </div>
   </div>
@@ -72,7 +72,6 @@ J'aime également apprendre toutes sortes de choses et sur  n'importe quel sujet
     .content-wrapper {
       position: relative;
       display: flex;
-
       justify-content: center;
       gap: 25%;
 
