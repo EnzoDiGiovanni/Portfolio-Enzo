@@ -70,7 +70,7 @@
       "_client.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.WZXoA6Lg.css"
+      "_app/immutable/assets/_layout.B5rUpwDf.css"
     ]
   },
   "src/routes/+page.js": {
@@ -89,7 +89,7 @@
       "_projects.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.D1s4lGSQ.css"
+      "_app/immutable/assets/_page.DI_PAc3u.css"
     ]
   },
   "src/routes/projects/[slug]/+page.server.js": {
@@ -111,7 +111,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.B0Wcqg5l.css"
+      "_app/immutable/assets/_page.Bu3ZbR5y.css"
     ]
   }
 }

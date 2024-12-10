@@ -12,12 +12,12 @@
 </script>
 
 <header bind:this={header}>
-  <nav class="container">
+  <nav class="container ">
     <a href="/">
-      <img src="/images/logo_edg.svg" class="logo" alt="logo" />
+      <img src="/images/logo_edg.svg" class="logo interactif" alt="logo" />
     </a>
 
-    <div class="wrapper">
+    <div class="wrapper interactif">
       <DarkModeToggle />
 
       <button
@@ -60,6 +60,11 @@
     right: 0;
     background-color: transparent;
     transition: box-shadow 0.3s ease;
+    pointer-events: none;
+
+    .interactif {
+      pointer-events: auto;
+    }
 
     .container {
       display: flex;
@@ -67,10 +72,14 @@
       justify-content: space-between;
       padding: 30px;
 
-      img {
+      .logo {
         width: 70px;
-        transition: transform 0.5s ease-out;
         cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       .wrapper {

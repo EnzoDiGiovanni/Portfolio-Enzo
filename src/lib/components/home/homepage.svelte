@@ -111,6 +111,8 @@
 </div>
 
 <style lang="scss">
+
+
   .home-page {
     display: flex;
     justify-content: center;
@@ -133,6 +135,7 @@
     p {
       color: var(--secondary-text);
       font-size: clamp(16px, 5vw, 32px);
+       font-family: "Anta", sans-serif;
     }
 
     .info-section {
@@ -147,6 +150,7 @@
         justify-content: center;
         align-items: center;
         gap: 15px;
+        font-family: "Anta", sans-serif;
 
       
 

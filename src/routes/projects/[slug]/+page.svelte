@@ -10,8 +10,8 @@
       <a href={project.gitSrc} target="_blank" rel="noopener noreferrer">
         Voir le projet
       </a>
-      <a href="/" target="_blank" rel="noopener noreferrer">
-        Retour au projects
+      <a href="/#projects"  rel="noopener noreferrer">
+        Retour aux projets
       </a>
     </div>
 
@@ -37,15 +37,16 @@
 
     <div class="wrapper-description">
       <div class="projectType">
+        <div class="description">
+          <p>{project.about}</p>
+        </div>
         <ul>
           {#each project.tags as tag}
-            <li>{tag}</li>
+            <li>| {tag} |</li>
           {/each}
         </ul>
       </div>
-      <div class="description">
-        <p>{project.about}</p>
-      </div>
+     
     </div>
   {:else}
     <p>Projet non trouvé</p>
@@ -69,7 +70,7 @@
     padding: 150px 30px 0 30px;
     display: flex;
     flex-direction: column;
-    height: 5000px;
+
     width: 100vw;
 
     a {
@@ -113,7 +114,7 @@
 
       h3 {
         padding: 20px;
-        font-size: clamp(2rem, 10vw, 10rem);
+        font-size: clamp(2rem, 9vw, 10rem);
       }
     }
 
@@ -172,12 +173,24 @@
     .wrapper-description {
       margin-top: 70px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       .projectType {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 80px;
+
         ul {
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+
           gap: 20px;
           li {
             color: var(--secondary-text);
@@ -185,9 +198,7 @@
         }
       }
 
-      .description {
-        width: 460px;
-      }
+     
     }
   }
 </style>

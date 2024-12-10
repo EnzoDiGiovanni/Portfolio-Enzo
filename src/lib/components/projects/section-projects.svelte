@@ -108,11 +108,13 @@ const allTechnos = [...new Set(Object.values(projects).flatMap(proj => proj.tech
             color: var(--button);
             border-color: var(--primary-text);
             transform: scale(1.1);
+
           }
 
           &:hover {
             background-color: var(--primary-hover);
-            color: white;
+
+            transform: scale(1.1);
           }
         }
       }
