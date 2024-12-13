@@ -13,6 +13,7 @@ const allTechnos = [...new Set(Object.values(projects).flatMap(proj => proj.tech
       Découvrez mes projets avec les différentes technologies/langages que
       j'aime utiliser !
     </p>
+    <a href="https://github.com/EnzoDiGiovanni?tab=repositories" target="_blank"><button class="allProjects">Voir tous mes projets</button></a>
   </header>
 
   <div class="projects-filter">
@@ -61,7 +62,7 @@ const allTechnos = [...new Set(Object.values(projects).flatMap(proj => proj.tech
   margin: 130px auto;
   padding: 0 20px;
 
-     header {
+  .projects-header {
     text-align: center;
     margin-bottom: 40px;
 
@@ -73,7 +74,22 @@ const allTechnos = [...new Set(Object.values(projects).flatMap(proj => proj.tech
     p {
       font-size: 1.2rem;
       color: var(--secondary-text);
-      margin-top: 10px;
+      margin: 30px 0;
+    }
+
+    .allProjects {
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid var(--ring);
+      background-color: var(--button);
+      border-radius: 20px;
+      color: var(--interactive);
+      transition: transform 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        color: var(--high-contrast-text);
+      }
     }
   }
 
@@ -104,15 +120,15 @@ const allTechnos = [...new Set(Object.values(projects).flatMap(proj => proj.tech
           transition: all 0.3s ease;
 
           &.selected {
-            background-color: var(--primary-text);
-            color: var(--button);
-            border-color: var(--primary-text);
+            background-color: var(--background);
+            color: var(--high-contrast-text);
+            border-color: var(--background);
             transform: scale(1.1);
 
           }
 
           &:hover {
-            background-color: var(--primary-hover);
+            background-color: var(--button);
 
             transform: scale(1.1);
           }
