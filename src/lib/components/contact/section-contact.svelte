@@ -6,14 +6,14 @@
   <div class=" wrapper">
 
     <p>
-      <label>Votre nom : <input type="text" name="name" placeholder="Enzo"/></label>
+      <label>Votre nom : <input type="text" name="name" placeholder="Enzo" required/></label>
     </p>
     <p>
-      <label>Votre email : <input type="email" name="email" placeholder="Di Giovanni" /></label>
+      <label>Votre email : <input type="email" name="email" placeholder="Di Giovanni" required/></label>
     </p>
   </div>
     <p>
-      <label>Message : <textarea name="message" placeholder="La raison de votre message"></textarea></label>
+      <label>Message : <textarea name="message" placeholder="La raison de votre message" required></textarea></label>
     </p>
   <p>
     <button type="submit">Envoyer</button>
