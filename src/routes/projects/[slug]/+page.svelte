@@ -7,12 +7,17 @@
   {#if project}
     <div class="project__title">
       <h3>{project.title}</h3>
-      <a href={project.gitSrc} target="_blank" rel="noopener noreferrer">
-        Voir le projet
-      </a>
-      <a href="/#projects"  rel="noopener noreferrer">
-        Retour aux projets
-      </a>
+      <div class="project__title-button">
+        <a href={project.gitSrc} target="_blank" rel="noopener noreferrer">
+          Voir le projet
+        </a>
+        <a href={project.code} target="_blank" rel="noopener noreferrer">
+          Voir le code
+        </a>
+        <a href="/#projects"  rel="noopener noreferrer">
+          Retour aux projets
+        </a>
+      </div>
     </div>
 
     <div class="line"></div>
@@ -111,6 +116,15 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+
+      .project__title-button {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+      }
 
       h3 {
         padding: 20px;
