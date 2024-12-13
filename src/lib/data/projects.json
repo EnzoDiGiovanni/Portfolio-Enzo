@@ -6,7 +6,7 @@
     "gitSrc": "https://github.com/EnzoDiGiovanni/Pokedex-2.0",
     "date": "2024",
     "imgSrc": "/images/pokedex.webp",
-    "technos": ["Svelte"],
+    "technos": ["HTML", "CSS", "Svelte"],
     "tags": ["Front-end", "Projet personnel", "API", "Développement web"],
     "about": "Créer un Pokedex était le meilleur moyen pour moi d'apprendre à utiliser Svelte et les calls API. "
   },
@@ -44,7 +44,7 @@
     "gitSrc": "https://github.com/EnzoDiGiovanni/ArcadeGames",
     "date": "2024",
     "imgSrc": "/images/arcadegame.webp",
-    "technos": ["JavaScript"],
+    "technos": ["HTML", "CSS", "JavaScript"],
     "tags": ["Front-end", "Projet personnel", "Développement web", "Jeux"],
     "about": "Étant fan des vieux jeux d'arcade et des jeux ayant marqué les gens, j'ai créé ce site pour entraîner mon JavaScript et pour me faire plaisir "
   }
