@@ -33,7 +33,7 @@ function Section_about($$payload) {
   $$payload.out += `<!----></div></div></section>`;
 }
 function Section_contact($$payload) {
-  $$payload.out += `<form name="contact" id="contact" netlify="" method="POST" data-netlify="true" class="svelte-1i3p7n4"><input type="hidden" name="form-name" value="contact" class="svelte-1i3p7n4"> <div class="wrapper svelte-1i3p7n4"><p class="svelte-1i3p7n4"><label class="svelte-1i3p7n4">Votre nom : <input type="text" name="name" placeholder="Enzo" class="svelte-1i3p7n4"></label></p> <p class="svelte-1i3p7n4"><label class="svelte-1i3p7n4">Votre email : <input type="email" name="email" placeholder="Di Giovanni" class="svelte-1i3p7n4"></label></p></div> <p class="svelte-1i3p7n4"><label class="svelte-1i3p7n4">Message : <textarea name="message" placeholder="La raison de votre message" class="svelte-1i3p7n4"></textarea></label></p> <p class="svelte-1i3p7n4"><button type="submit" class="svelte-1i3p7n4">Envoyer</button></p></form>`;
+  $$payload.out += `<form name="contact" id="contact" netlify="" method="POST" data-netlify="true" class="svelte-1i3p7n4"><input type="hidden" name="form-name" value="contact" class="svelte-1i3p7n4"> <div class="wrapper svelte-1i3p7n4"><p class="svelte-1i3p7n4"><label class="svelte-1i3p7n4">Votre nom : <input type="text" name="name" placeholder="Enzo" required class="svelte-1i3p7n4"></label></p> <p class="svelte-1i3p7n4"><label class="svelte-1i3p7n4">Votre email : <input type="email" name="email" placeholder="Di Giovanni" required class="svelte-1i3p7n4"></label></p></div> <p class="svelte-1i3p7n4"><label class="svelte-1i3p7n4">Message : <textarea name="message" placeholder="La raison de votre message" required class="svelte-1i3p7n4"></textarea></label></p> <p class="svelte-1i3p7n4"><button type="submit" class="svelte-1i3p7n4">Envoyer</button></p></form>`;
 }
 function Homepage($$payload, $$props) {
   push();
@@ -66,16 +66,16 @@ function Section_projects($$payload, $$props) {
   ];
   const each_array = ensure_array_like(allTechnos);
   const each_array_1 = ensure_array_like(Object.values(projects).filter((proj) => !selectedTech));
-  $$payload.out += `<section id="projects" class="projects-section svelte-1oytxlu"><header class="projects-header svelte-1oytxlu"><h2 class="svelte-1oytxlu">Projets</h2> <p class="svelte-1oytxlu">Découvrez mes projets avec les différentes technologies/langages que
-      j'aime utiliser !</p></header> <div class="projects-filter svelte-1oytxlu"><ul class="svelte-1oytxlu"><li class="svelte-1oytxlu"><button type="button"${attr("class", `svelte-1oytxlu ${stringify(["selected"].filter(Boolean).join(" "))}`)}>Tous</button></li> <!--[-->`;
+  $$payload.out += `<section id="projects" class="projects-section svelte-b26wkf"><header class="projects-header svelte-b26wkf"><h2 class="svelte-b26wkf">Projets</h2> <p class="svelte-b26wkf">Découvrez mes projets avec les différentes technologies/langages que
+      j'aime utiliser !</p> <a href="https://github.com/EnzoDiGiovanni?tab=repositories" target="_blank" class="svelte-b26wkf"><button class="allProjects svelte-b26wkf">Voir tous mes projets</button></a></header> <div class="projects-filter svelte-b26wkf"><ul class="svelte-b26wkf"><li class="svelte-b26wkf"><button type="button"${attr("class", `svelte-b26wkf ${stringify(["selected"].filter(Boolean).join(" "))}`)}>Tous</button></li> <!--[-->`;
   for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
     let tech = each_array[$$index];
-    $$payload.out += `<li class="svelte-1oytxlu"><button type="button"${attr("class", `svelte-1oytxlu ${stringify([selectedTech === tech ? "selected" : ""].filter(Boolean).join(" "))}`)}>${escape_html(tech)}</button></li>`;
+    $$payload.out += `<li class="svelte-b26wkf"><button type="button"${attr("class", `svelte-b26wkf ${stringify([selectedTech === tech ? "selected" : ""].filter(Boolean).join(" "))}`)}>${escape_html(tech)}</button></li>`;
   }
-  $$payload.out += `<!--]--></ul></div> <div class="projects-grid svelte-1oytxlu"><!--[-->`;
+  $$payload.out += `<!--]--></ul></div> <div class="projects-grid svelte-b26wkf"><!--[-->`;
   for (let $$index_1 = 0, $$length = each_array_1.length; $$index_1 < $$length; $$index_1++) {
     let project = each_array_1[$$index_1];
-    $$payload.out += `<a${attr("href", project.link)}${attr("aria-label", `Détails du projet ${project.title}`)} class="svelte-1oytxlu">`;
+    $$payload.out += `<a${attr("href", project.link)}${attr("aria-label", `Détails du projet ${project.title}`)} class="svelte-b26wkf">`;
     Project_card($$payload, {
       title: project.title,
       desc: project.desc,
@@ -87,7 +87,7 @@ function Section_projects($$payload, $$props) {
   pop();
 }
 function Section_skills($$payload) {
-  $$payload.out += `<section class="skills svelte-1yi9f8k" id="competence"><h2 class="svelte-1yi9f8k">Mes Compétences !</h2> <div class="web svelte-1yi9f8k"><p class="svelte-1yi9f8k">WEB</p> <div class="skillsContainer svelte-1yi9f8k"><div class="skill svelte-1yi9f8k"><i class="fa-brands fa-html5 svelte-1yi9f8k"></i> <span class="svelte-1yi9f8k">HTML</span></div> <div class="skill svelte-1yi9f8k"><i class="fa-brands fa-sass svelte-1yi9f8k"></i> <span class="svelte-1yi9f8k">SCSS</span></div> <div class="skill svelte-1yi9f8k"><i class="fa-brands fa-square-js svelte-1yi9f8k"></i> <span class="svelte-1yi9f8k">JAVASCRIPT</span></div> <div class="skill svelte-1yi9f8k"><i class="fa-brands fa-php svelte-1yi9f8k"></i> <span class="svelte-1yi9f8k">PHP</span></div></div></div> <div class="mobile svelte-1yi9f8k"><p class="svelte-1yi9f8k">MOBILE</p> <div class="skillsContainer svelte-1yi9f8k"><div class="skill svelte-1yi9f8k"><i class="fa-brands fa-flutter svelte-1yi9f8k"></i> <span class="svelte-1yi9f8k">FLUTTER</span></div></div></div></section>`;
+  $$payload.out += `<section class="skills svelte-1m29px9" id="competence"><h2 class="svelte-1m29px9">Mes Compétences !</h2> <div class="front-end svelte-1m29px9"><p class="svelte-1m29px9">FRONT - END</p> <div class="skillsContainer svelte-1m29px9"><div class="skill svelte-1m29px9"><i class="fa-brands fa-html5 svelte-1m29px9"></i> <span class="svelte-1m29px9">HTML</span></div> <div class="skill svelte-1m29px9"><i class="fa-brands fa-sass svelte-1m29px9"></i> <span class="svelte-1m29px9">SCSS</span></div> <div class="skill svelte-1m29px9"><i class="fa-brands fa-square-js svelte-1m29px9"></i> <span class="svelte-1m29px9">JAVASCRIPT</span></div></div></div> <div class="back-end svelte-1m29px9"><p class="svelte-1m29px9">BACK - END</p> <div class="skillsContainer svelte-1m29px9"><div class="skill svelte-1m29px9"><i class="fa-brands fa-golang svelte-1m29px9"></i> <span class="svelte-1m29px9">GO</span></div> <div class="skill svelte-1m29px9"><i class="fa-brands fa-php svelte-1m29px9"></i> <span class="svelte-1m29px9">PHP</span></div></div></div> <div class="mobile svelte-1m29px9"><p class="svelte-1m29px9">MOBILE</p> <div class="skillsContainer svelte-1m29px9"><div class="skill svelte-1m29px9"><i class="fa-brands fa-flutter svelte-1m29px9"></i> <span class="svelte-1m29px9">FLUTTER</span></div></div></div></section>`;
 }
 function _page($$payload) {
   Min_elements($$payload);

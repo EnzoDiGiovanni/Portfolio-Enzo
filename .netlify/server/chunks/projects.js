@@ -6,6 +6,8 @@ const pokedex = {
   date: "2024",
   imgSrc: "/images/pokedex.webp",
   technos: [
+    "HTML",
+    "CSS",
     "Svelte"
   ],
   tags: [
@@ -59,6 +61,8 @@ const arcade = {
   date: "2024",
   imgSrc: "/images/arcadegame.webp",
   technos: [
+    "HTML",
+    "CSS",
     "JavaScript"
   ],
   tags: [

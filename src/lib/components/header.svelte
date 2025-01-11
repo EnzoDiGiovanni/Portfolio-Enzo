@@ -27,7 +27,7 @@
   });
 </script>
 
-<header id="header" class:scrolled={scrolled}>
+<header id="header" class:scrolled>
   <nav class="container">
     <a href="/">
       <img src="/images/logo_edg.svg" class="logo" alt="logo" />
@@ -48,19 +48,13 @@
     <div class="side_nav {sideNavOpen ? 'open' : ''}">
       <ul class="nav_links">
         <li class:active={activeLink === "projets"}>
-          <a href="#projects" on:click={closeSideNav}>
-            PROJETS <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <a href="#projects" on:click={closeSideNav}> PROJETS </a>
         </li>
         <li class:active={activeLink === "competences"}>
-          <a href="#competence" on:click={closeSideNav}>
-            COMPÉTENCES <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <a href="#competence" on:click={closeSideNav}> COMPÉTENCES </a>
         </li>
         <li class:active={activeLink === "contact"}>
-          <a href="#contact" on:click={closeSideNav}>
-            ME CONTACTER <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <a href="#contact" on:click={closeSideNav}> ME CONTACTER </a>
         </li>
       </ul>
     </div>
@@ -69,114 +63,119 @@
 
 <style lang="scss">
   #header {
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--background);
-  box-shadow: none;
-  transition: box-shadow 0.3s ease;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background);
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
 
-  &.scrolled {
-    box-shadow: 0 2px 10px var(--ring);
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    margin: 0 30px;
-
-    .logo {
-      width: 70px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.1);
-      }
+    &.scrolled {
+      box-shadow: 0 2px 10px var(--ring);
     }
 
-    .wrapper {
+    .container {
       display: flex;
-      gap: 20px;
-    }
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 15px;
+      margin: 0 30px;
 
-    .burger-menu {
-      background: transparent;
-      border: none;
-      z-index: 10;
-
-      .fa-compass {
-        font-size: 50px;
-        color: var(--button);
-        animation: compass_spin 7s linear infinite;
+      .logo {
+        width: 50px;
         cursor: pointer;
-        transition: rotate 0.3s ease, color 0.3s ease;
+        transition: transform 0.3s ease;
 
         &:hover {
-          rotate: 360deg;
-          font-weight: bold;
-          color: var(--ring);
+          transform: scale(1.1);
+        }
+      }
+
+      .wrapper {
+        display: flex;
+        gap: 20px;
+      }
+
+      .burger-menu {
+        background: transparent;
+        border: none;
+        z-index: 10;
+
+        .fa-compass {
+          font-size: 50px;
+          color: var(--button);
+          animation: compass_spin 7s linear infinite;
+          cursor: pointer;
+
+          &,
+          &::before {
+            shape-outside: circle(50%);
+            border-radius: 50%;
+          }
+
+          transition:
+            rotate 0.3s ease,
+            color 0.3s ease;
+
+          &:hover {
+            rotate: 360deg;
+            font-weight: bold;
+            color: var(--ring);
+          }
         }
       }
     }
-  }
 
-  .side_nav {
-    overflow: hidden;
-    position: fixed;
-    top: -100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--background);
-    transition: 0.5s;
-    backdrop-filter: blur(10px);
-    height: 100%;
-    width: 100%;
-
-    &.open {
-      top: 0;
-    }
-
-    .nav_links {
-      padding: 40px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      width: 100%;
+    .side_nav {
+      overflow: hidden;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: 0.5s;
+      backdrop-filter: blur(10px);
       height: 100%;
+      width: 100%;
 
-      li {
-        padding: 30px;
-        text-align: center;
-        transition: box-shadow 0.3s ease;
-        position: relative;
-        overflow: hidden;
+      &.open {
+        top: 0;
+      }
 
-        a {
-          display: block;
-          color: var(--secondary-text);
-          transition: color 0.65s ease;
-          font-size: 20px;
-          width: 100%;
+      .nav_links {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
 
-          .fa-arrow-right {
-            transition: all 0.2s ease;
-            transform: translate(30px, 0);
-            opacity: 0;
+        li {
+          padding: 30px;
+          text-align: center;
+          transition: box-shadow 0.3s ease;
+          position: relative;
+          overflow: hidden;
+
+          a {
+            display: block;
+            color: var(--secondary-text);
+            transition: color 0.65s ease;
+            font-size: 20px;
+            width: 100%;
+            transition:
+              transform 0.2s ease-in-out,
+              background-color 0.2s ease-in-out;
 
             &:hover {
-              opacity: 1;
-              transform: translate(0, 0);
+              transform: scale(1.1);
+              background-color: var(--background);
             }
           }
         }
       }
     }
   }
-}
 </style>
