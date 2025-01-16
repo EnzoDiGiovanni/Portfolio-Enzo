@@ -8,6 +8,7 @@
 
   const toggleSideNav = () => {
     sideNavOpen = !sideNavOpen;
+    document.body.style.overflow = sideNavOpen ? "hidden" : "";
   };
 
   const closeSideNav = () => {
@@ -71,6 +72,8 @@
     background-color: var(--background);
     box-shadow: none;
     transition: box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 100vw;
 
     &.scrolled {
       box-shadow: 0 2px 10px var(--ring);

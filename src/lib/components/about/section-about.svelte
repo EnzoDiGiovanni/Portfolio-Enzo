@@ -13,12 +13,6 @@
         opacity: 0,
         easing: "ease-in-out",
       });
-      ScrollReveal().reveal(".info-cards", {
-        duration: 1000,
-        origin: "right",
-        distance: "100px",
-        easing: "ease-in-out",
-      });
     }
   });
 </script>

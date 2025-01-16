@@ -8,7 +8,7 @@
 
       ScrollReveal().reveal(".card-anim", {
         duration: 1700,
-        origin: "right",
+        origin: "left",
         distance: "200px",
         easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
       });

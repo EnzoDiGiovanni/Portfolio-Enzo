@@ -1,5 +1,3 @@
-<div class="scroller"></div>
-
 <style lang="scss">
   .scroller {
     position: fixed;
