@@ -1,11 +1,31 @@
 <script>
   import projects from "$lib/data/projects.json";
+  import { onMount } from "svelte";
   import ProjectCard from "./project-card.svelte";
 
   let selectedTech = "";
   const allTechnos = [
     ...new Set(Object.values(projects).flatMap((proj) => proj.technos)),
   ];
+
+  onMount(async () => {
+    if (typeof window !== "undefined") {
+      const ScrollReveal = (await import("scrollreveal")).default;
+
+      ScrollReveal().reveal(".projects-header", {
+        duration: 1000,
+        origin: "bottom",
+        distance: "1000px",
+        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+      });
+      ScrollReveal().reveal(".projects-filter", {
+        duration: 1500,
+        origin: "bottom",
+        distance: "1000px",
+        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+      });
+    }
+  });
 </script>
 
 <section id="projects" class="projects-section">

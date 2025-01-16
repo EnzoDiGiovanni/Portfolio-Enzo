@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<h2>Et si on prenais contact ? !</h2>
+<h2>Et si on prenait contact ?</h2>
 
 <form name="contact" id="contact" netlify method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
@@ -52,7 +52,7 @@
   form {
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px 70px 20px;
     border-radius: 8px;
 
     .wrapper {
@@ -81,14 +81,16 @@
     textarea {
       width: 100%;
       padding: 8px;
+      background-color: transparent;
       border: 1px solid var(--border-separator);
       border-radius: 4px;
       font-size: 14px;
-      transition: border-color 0.2s;
+      transition: border-color 0.3s;
       resize: none;
+      color: white;
 
       &:focus {
-        border-color: var(--ring);
+        border-color: var(--high-contrast-text);
         outline: none;
       }
     }

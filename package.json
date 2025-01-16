@@ -45,6 +45,7 @@
     "animejs": "^3.2.2",
     "gsap": "^3.12.5",
     "lenis": "^1.1.16",
+    "scrollreveal": "^4.0.9",
     "splitting": "^1.1.0"
   }
 }

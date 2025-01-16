@@ -263,6 +263,7 @@
 
     <div class="mobile card">
       <svg
+        class="cardImg"
         width="800px"
         height="800px"
         viewBox="0 0 24 24"
@@ -336,6 +337,7 @@
 
     <div class="tools card">
       <svg
+        class="cardImg"
         width="80px"
         height="80px"
         viewBox="0 0 20 20"
@@ -418,62 +420,64 @@
       }
 
       .card {
-        background: var(--interactive);
-        width: 300px;
-        height: 350px;
-        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          var(--interactive) 0%,
+          var(--ring) 100%
+        );
+        width: 320px;
+        height: 380px;
+        border-radius: 25px;
         display: flex;
-        border: 2px solid var(--border-separator);
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
-        padding: 1rem;
-        transition:
-          filter 0.2s ease-in-out,
-          border 0.2s ease-in-out,
-          transform 0.3s ease-in-out,
-          box-shadow 0.3s ease-in-out,
-          background 0.3s ease-in-out,
-          color 0.3s ease-in-out;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
+        padding: 2rem;
+        border: none;
         position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          background 0.3s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: inherit;
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          z-index: 0;
+        }
+
+        * {
+          position: relative;
+          z-index: 1;
+        }
 
         &:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-          background: var(--ring);
-          border: 2px solid var(--high-contrast-text);
-
-          h3,
-          p {
-            color: var(--background);
-          }
+          transform: translateY(-12px);
         }
 
         h3 {
-          color: var(--high-contrast-text);
-          font-size: 2rem;
+          font-size: 2.2rem;
           font-weight: bold;
-        }
-
-        p {
-          color: var(--secondary-text);
-          font-size: 1.2rem;
-          margin-bottom: 1rem;
-        }
-
-        h3,
-        p {
           color: var(--high-contrast-text);
-          transition: color 0.3s ease-in-out;
+        }
+
+        p {
+          font-size: 1.2rem;
+          color: var(--secondary-text);
         }
 
         .cardImg {
-          width: 80px;
-          height: 80px;
-          object-fit: contain;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 10px;
         }
       }
 
@@ -481,14 +485,19 @@
       .back-end,
       .mobile,
       .tools {
+        & > svg g {
+          fill: var(--secondary-text);
+        }
+
         ul {
           display: flex;
-          align-items: center;
           justify-content: center;
+          align-items: center;
           gap: 15px;
+
           svg {
-            height: 40px;
-            width: 40px;
+            height: 30px;
+            width: 35px;
             cursor: pointer;
             transition: transform 0.3s ease;
 
@@ -501,6 +510,175 @@
           }
         }
       }
+    }
+
+    .front-end {
+      .html {
+        &::before {
+          content: "HTML";
+        }
+
+        svg:hover {
+          transform: translateY(-2px);
+          path:nth-child(1) {
+            fill: #e44d26;
+          }
+          path:nth-child(2) {
+            fill: #f16529;
+          }
+        }
+      }
+
+      .css {
+        &::before {
+          content: "CSS";
+        }
+
+        svg:hover {
+          transform: translateY(-2px);
+          path:nth-child(1) {
+            fill: #1172b8;
+          }
+          path:nth-child(2) {
+            fill: #33aadd;
+          }
+        }
+      }
+
+      .scss {
+        &::before {
+          content: "scss";
+        }
+        svg:hover {
+          transform: translateY(-2px);
+          path:nth-child(2) {
+            fill: #c69 !important;
+          }
+        }
+      }
+
+      .javascript {
+        &::before {
+          content: "JavaScript";
+        }
+        svg:hover {
+          transform: translateY(-2px);
+          rect {
+            fill: #ffca28;
+          }
+          path:nth-child(3),
+          path:nth-child(2) {
+            fill: #3e3e3e;
+          }
+        }
+      }
+      .angular {
+        &::before {
+          content: "Angular";
+        }
+        svg:hover {
+          transform: translateY(-2px);
+          path:nth-child(1) {
+            fill: #dd0031;
+          }
+          path:nth-child(2) {
+            fill: #c3002f;
+          }
+        }
+      }
+    }
+
+    .back-end {
+      ul {
+        .golang {
+          &::before {
+            content: "Golang";
+          }
+          svg:hover {
+            transform: translateY(-2px);
+            path:nth-child(1) {
+              fill: #00acd7;
+            }
+          }
+        }
+        .php {
+          &::before {
+            content: "PHP";
+          }
+          svg:hover {
+            transform: translateY(-2px);
+
+            ellipse {
+              fill: #8993be;
+            }
+          }
+        }
+      }
+    }
+
+    .mobile {
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+
+      ul {
+        svg {
+          position: relative;
+          left: -2px;
+        }
+
+        .flutter {
+          &::before {
+            content: "Flutter";
+          }
+          svg:hover {
+            transform: translateY(-2px);
+
+            polyline {
+              fill: #40d0fd !important;
+            }
+            polygon:nth-child(3) {
+              fill: #41d0fd !important;
+            }
+            polygon:nth-child(4) {
+              fill: #1fbcfd !important;
+            }
+            polygon:nth-child(5) {
+              fill: #095a9d !important;
+            }
+            polygon:nth-child(6) {
+              fill: #0e5199 !important;
+            }
+          }
+        }
+      }
+    }
+
+    .tools {
+      ul {
+        svg {
+          position: relative;
+          left: -2px;
+        }
+
+        .git {
+          &::before {
+            content: "Git";
+          }
+          svg:hover {
+            transform: translateY(-2px);
+
+            path:nth-child(1) {
+              fill: #ee513b;
+            }
+          }
+        }
+      }
+    }
+
+    ul {
+      flex-wrap: wrap;
 
       .html,
       .css,
@@ -511,17 +689,34 @@
       .php,
       .flutter,
       .git {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 10px;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+          background: var(--high-contrast-text);
+        }
 
         &::before {
           opacity: 0;
           visibility: hidden;
           width: max-content;
+          padding: 8px 12px;
+          background: rgba(0, 0, 0, 0.85);
           color: white;
+          font-size: 14px;
+          font-weight: 500;
+          border-radius: 8px;
           position: absolute;
           top: 0;
           left: 50%;
           transform: translateX(-50%);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           transition:
             top 0.3s ease-in-out,
             opacity 0.3s ease-in-out,
@@ -531,192 +726,8 @@
         &:hover::before {
           opacity: 1;
           visibility: visible;
-          top: -25px;
+          top: -40px;
           transition-delay: 0s;
-        }
-      }
-
-      .front-end {
-        & > svg g {
-          fill: var(--secondary-text);
-        }
-
-        ul {
-          .html {
-            &::before {
-              content: "HTML";
-            }
-
-            svg:hover {
-              transform: translateY(-2px);
-              path:nth-child(1) {
-                fill: #e44d26;
-              }
-              path:nth-child(2) {
-                fill: #f16529;
-              }
-            }
-          }
-
-          .css {
-            &::before {
-              content: "CSS";
-            }
-
-            svg:hover {
-              transform: translateY(-2px);
-              path:nth-child(1) {
-                fill: #1172b8;
-              }
-              path:nth-child(2) {
-                fill: #33aadd;
-              }
-            }
-          }
-
-          .scss {
-            &::before {
-              content: "scss";
-            }
-            svg:hover {
-              transform: translateY(-2px);
-              path:nth-child(2) {
-                fill: #c69 !important;
-              }
-            }
-          }
-
-          .javascript {
-            &::before {
-              content: "JavaScript";
-            }
-            svg:hover {
-              transform: translateY(-2px);
-              rect {
-                fill: #ffca28;
-              }
-              path:nth-child(3),
-              path:nth-child(2) {
-                fill: #3e3e3e;
-              }
-            }
-          }
-
-          .angular {
-            &::before {
-              content: "Angular";
-            }
-            svg:hover {
-              transform: translateY(-2px);
-              path:nth-child(1) {
-                fill: #dd0031;
-              }
-              path:nth-child(2) {
-                fill: #c3002f;
-              }
-            }
-          }
-        }
-      }
-
-      .back-end {
-        & > svg g {
-          fill: var(--secondary-text);
-        }
-
-        ul {
-          .golang {
-            &::before {
-              content: "Golang";
-            }
-            svg:hover {
-              transform: translateY(-2px);
-              path:nth-child(1) {
-                fill: #00acd7;
-              }
-            }
-          }
-          .php {
-            &::before {
-              content: "PHP";
-            }
-            svg:hover {
-              transform: translateY(-2px);
-
-              ellipse {
-                fill: #8993be;
-              }
-            }
-          }
-        }
-      }
-
-      .mobile {
-        & > svg g {
-          fill: var(--secondary-text);
-        }
-
-        svg {
-          width: 80px;
-          height: 80px;
-        }
-
-        ul {
-          svg {
-            position: relative;
-            left: -2px;
-          }
-
-          .flutter {
-            &::before {
-              content: "Flutter";
-            }
-            svg:hover {
-              transform: translateY(-2px);
-
-              polyline {
-                fill: #40d0fd !important;
-              }
-              polygon:nth-child(3) {
-                fill: #41d0fd !important;
-              }
-              polygon:nth-child(4) {
-                fill: #1fbcfd !important;
-              }
-              polygon:nth-child(5) {
-                fill: #095a9d !important;
-              }
-              polygon:nth-child(6) {
-                fill: #0e5199 !important;
-              }
-            }
-          }
-        }
-      }
-
-      .tools {
-        & > svg g {
-          fill: var(--secondary-text);
-        }
-
-        ul {
-          svg {
-            position: relative;
-            left: -2px;
-          }
-
-          .git {
-            &::before {
-              content: "Git";
-            }
-            svg:hover {
-              transform: translateY(-2px);
-
-              path:nth-child(1) {
-                fill: #ee513b;
-              }
-            }
-          }
         }
       }
     }

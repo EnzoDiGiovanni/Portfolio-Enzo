@@ -1,8 +1,22 @@
 <script>
   const { title, desc } = $props();
+
+  import { onMount } from "svelte";
+  onMount(async () => {
+    if (typeof window !== "undefined") {
+      const ScrollReveal = (await import("scrollreveal")).default;
+
+      ScrollReveal().reveal(".card-anim", {
+        duration: 1700,
+        origin: "right",
+        distance: "200px",
+        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+      });
+    }
+  });
 </script>
 
-<div class="card">
+<div class="card card-anim">
   <h3>{title}</h3>
   <p>
     {desc}

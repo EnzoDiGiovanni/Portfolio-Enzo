@@ -1,5 +1,26 @@
 <script>
+  import { onMount } from "svelte";
   import CardInfo from "./about-card.svelte";
+
+  onMount(async () => {
+    if (typeof window !== "undefined") {
+      const ScrollReveal = (await import("scrollreveal")).default;
+
+      ScrollReveal().reveal(".profile-image", {
+        duration: 1000,
+        origin: "bottom",
+        distance: "50px",
+        opacity: 0,
+        easing: "ease-in-out",
+      });
+      ScrollReveal().reveal(".info-cards", {
+        duration: 1000,
+        origin: "right",
+        distance: "100px",
+        easing: "ease-in-out",
+      });
+    }
+  });
 </script>
 
 <section class="about-section">
@@ -81,9 +102,20 @@ J'aime également apprendre toutes sortes de choses et sur n'importe quel sujet 
         left: 0;
         height: 100%;
         width: 300px;
+        overflow: hidden;
 
         .profile-picture {
           width: 100%;
+          mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(0, 0, 0, 0) 100%
+          );
         }
       }
 

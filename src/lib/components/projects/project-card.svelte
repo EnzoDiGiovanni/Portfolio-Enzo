@@ -17,9 +17,22 @@
   onMount(() => {
     color = colors[Math.floor(Math.random() * colors.length)];
   });
+
+  onMount(async () => {
+    if (typeof window !== "undefined") {
+      const ScrollReveal = (await import("scrollreveal")).default;
+
+      ScrollReveal().reveal(".anim-r", {
+        duration: 1300,
+        origin: "bottom",
+        distance: "1000px",
+        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+      });
+    }
+  });
 </script>
 
-<div class="card" style:--bg={color}>
+<div class="card anim-r" style:--bg={color}>
   <div class="card-title">
     <h2>{title}</h2>
     <p>{desc}</p>

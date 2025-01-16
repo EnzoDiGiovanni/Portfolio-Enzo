@@ -8,15 +8,20 @@
     <div class="project__title">
       <h3>{project.title}</h3>
       <div class="project__title-button">
+        {#if project.projectLink}
+          <a
+            href={project.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir le projet
+          </a>
+        {/if}
+
         <a href={project.gitSrc} target="_blank" rel="noopener noreferrer">
-          Voir le projet
-        </a>
-        <a href={project.code} target="_blank" rel="noopener noreferrer">
           Voir le code
         </a>
-        <a href="/#projects"  rel="noopener noreferrer">
-          Retour aux projets
-        </a>
+        <a href="/#projects" rel="noopener noreferrer"> Retour aux projets </a>
       </div>
     </div>
 
@@ -24,7 +29,7 @@
 
     <div class="description">
       <p>{project.desc}</p>
-    
+
       <p>{project.date}</p>
     </div>
 
@@ -51,7 +56,6 @@
           {/each}
         </ul>
       </div>
-     
     </div>
   {:else}
     <p>Projet non trouvé</p>
@@ -101,7 +105,7 @@
         z-index: -1;
       }
 
-       &:hover::before {
+      &:hover::before {
         transform: scaleY(1);
       }
       &:not(:hover)::before {
@@ -123,7 +127,6 @@
         flex-direction: column;
         justify-content: center;
         gap: 30px;
-
       }
 
       h3 {
@@ -144,8 +147,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      
     }
 
     .wrapper {
@@ -211,8 +212,6 @@
           }
         }
       }
-
-     
     }
   }
 </style>

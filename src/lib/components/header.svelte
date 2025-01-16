@@ -89,12 +89,13 @@
         transition: transform 0.3s ease;
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.2) rotate(-5deg);
         }
       }
 
       .wrapper {
         display: flex;
+        align-items: center;
         gap: 20px;
       }
 
@@ -129,49 +130,46 @@
     }
 
     .side_nav {
-      overflow: hidden;
       position: fixed;
       top: -100%;
       left: 0;
-      right: 0;
-      bottom: 0;
-      transition: 0.5s;
-      backdrop-filter: blur(10px);
-      height: 100%;
       width: 100%;
+      height: 100%;
+      backdrop-filter: blur(15px);
+      transition: top 0.6s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &.open {
         top: 0;
       }
 
       .nav_links {
-        padding: 40px;
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        width: 100%;
-        height: 100%;
+        list-style: none;
+        padding: 0;
+        text-align: center;
 
         li {
-          padding: 30px;
-          text-align: center;
-          transition: box-shadow 0.3s ease;
-          position: relative;
-          overflow: hidden;
+          margin: 20px 0;
+          font-size: 24px;
+          font-weight: bold;
 
           a {
-            display: block;
-            color: var(--secondary-text);
-            transition: color 0.65s ease;
-            font-size: 20px;
-            width: 100%;
-            transition:
-              transform 0.2s ease-in-out,
-              background-color 0.2s ease-in-out;
+            color: var(--high-contrast-text);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: 2px solid var(--ring);
+            transition: all 0.4s ease-in-out;
 
             &:hover {
+              background: var(--ring);
+              color: var(--background);
               transform: scale(1.1);
-              background-color: var(--background);
             }
           }
         }

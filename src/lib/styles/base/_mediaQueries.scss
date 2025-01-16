@@ -93,3 +93,9 @@
     gap: 10px;
   }
 }
+
+@media screen and (max-width: 435px) {
+  .info-section {
+    flex-direction: column;
+  }
+}

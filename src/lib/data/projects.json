@@ -1,20 +1,10 @@
 {
-  "pokedex": {
-    "title": "Pokédex",
-    "link": "/projects/pokedex",
-    "desc": "Pokédex créé en Svelte",
-    "gitSrc": "https://github.com/EnzoDiGiovanni/Pokedex-2.0",
-    "date": "2024",
-    "imgSrc": "/images/pokedex.webp",
-    "technos": ["HTML", "CSS", "Svelte"],
-    "tags": ["Front-end", "Projet personnel", "API", "Développement web"],
-    "about": "Créer un Pokedex était le meilleur moyen pour moi d'apprendre à utiliser Svelte et les calls API. "
-  },
   "APIREST": {
     "title": "API REST",
     "link": "/projects/APIREST",
     "desc": "Ma première API REST créée en GO / Postman ",
     "gitSrc": "https://github.com/EnzoDiGiovanni/Rest-API-Golang",
+
     "date": "2024",
     "imgSrc": "/images/restapi.png",
     "technos": ["Golang"],
@@ -26,6 +16,34 @@
     ],
     "about": "J'ai créé cette première API REST en Go pour deux raisons : apprendre ce langage que je découvre et m'initier à la création d'API REST, afin de poser les bases pour développer des projets Back-End plus ambitieux."
   },
+  "B2SEOMDS": {
+    "title": "B2SEOMDS",
+    "link": "/projects/B2SEOMDS",
+    "desc": "Challenge SEO sur un mot-clé aléatoire",
+    "gitSrc": "https://github.com/johan-jnn/b2seomds",
+    "projectLink": "https://cheh.johan-janin.com/",
+    "date": "2024",
+    "imgSrc": "/images/b2seomds.webp",
+    "technos": ["Svelte"],
+    "tags": [
+      "Développement Front-End",
+      "Projet marketing digital",
+      "Seo",
+      "Postman"
+    ],
+    "about": "Ce challenge, initié par notre intervenant, consistait à atteindre la première position sur Google pour un mot-clé inexistant. L’objectif était d’être classé premier à une date précise, déterminant ainsi notre note finale. Avec mon équipe, nous avons tout optimisé via le code, notamment en utilisant le Markdown pour la rédaction des articles de blog, afin d’améliorer au maximum le référencement naturel. Nous avons choisi d’éviter WordPress, car son installation volumineuse impacte significativement les performances et les temps de chargement du site."
+  },
+  "pokedex": {
+    "title": "Pokédex",
+    "link": "/projects/pokedex",
+    "desc": "Pokédex créé en Svelte",
+    "gitSrc": "https://github.com/EnzoDiGiovanni/Pokedex-2.0",
+    "date": "2024",
+    "imgSrc": "/images/pokedex.webp",
+    "technos": ["HTML", "CSS", "Svelte"],
+    "tags": ["Front-end", "Projet personnel", "API", "Développement web"],
+    "about": "Créer un Pokedex était le meilleur moyen pour moi d'apprendre à utiliser Svelte et les calls API. "
+  },
   "myBookList": {
     "title": "My Book List",
     "link": "/projects/myBookList",
@@ -36,16 +54,5 @@
     "technos": ["Flutter"],
     "tags": ["Développement mobile", "Projet personnel", "GoogleBooks API"],
     "about": "À la demande d’un proche, un ami et moi avons commencé à développer une application qui permet de gérer les livres à lire et ceux déjà lus. L’application propose également une fonctionnalité pour ajouter des livres à une wishList afin de les acheter plus tard, ainsi qu’une section de recherche connectée à l’API de Google pour enrichir la wishList."
-  },
-  "arcade": {
-    "title": "Arcade Games",
-    "link": "/projects/arcade",
-    "desc": "Site de jeux connus, réalisé avec JavaScript",
-    "gitSrc": "https://github.com/EnzoDiGiovanni/ArcadeGames",
-    "date": "2024",
-    "imgSrc": "/images/arcadegame.webp",
-    "technos": ["HTML", "CSS", "JavaScript"],
-    "tags": ["Front-end", "Projet personnel", "Développement web", "Jeux"],
-    "about": "Étant fan des vieux jeux d'arcade et des jeux ayant marqué les gens, j'ai créé ce site pour entraîner mon JavaScript et pour me faire plaisir "
   }
 }

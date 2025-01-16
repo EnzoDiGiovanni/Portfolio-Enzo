@@ -2,6 +2,31 @@
   import { animLine } from "$lib/utils/anime.js";
   import { onMount } from "svelte";
 
+  onMount(async () => {
+    if (typeof window !== "undefined") {
+      const ScrollReveal = (await import("scrollreveal")).default;
+
+      ScrollReveal().reveal(".location", {
+        duration: 1300,
+        origin: "left",
+        distance: "100px",
+        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+      });
+      ScrollReveal().reveal(".availability", {
+        duration: 1300,
+        origin: "right",
+        distance: "100px",
+        easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
+      });
+      ScrollReveal().reveal(".profile-section, .welcome-message", {
+        duration: 2000,
+        origin: "bottom",
+        distance: "100px",
+        easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
+      });
+    }
+  });
+
   onMount(() => {
     animLine();
   });
@@ -88,17 +113,19 @@
   </section>
 
   <section class="profile-section">
-    <p class="role">Développeur Web</p>
+    <p class="role .sr-hidden">Développeur Web</p>
     <div class="social-links">
       <a
         href="https://www.linkedin.com/in/enzodigiovanni/"
         aria-label="Lien vers mon profil LinkedIn"
+        target="_blank"
       >
         <i class="fa-brands fa-linkedin"></i>
       </a>
       <a
         href="https://github.com/EnzoDiGiovanni"
         aria-label="Lien vers mon profil Github"
+        target="_blank"
       >
         <i class="fa-brands fa-square-github"></i>
       </a>
@@ -111,8 +138,6 @@
 </div>
 
 <style lang="scss">
-
-
   .home-page {
     display: flex;
     justify-content: center;
@@ -122,6 +147,11 @@
     height: 100vh;
     gap: 20px;
 
+    .sr-hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      visibility: hidden;
+    }
 
     h1 {
       margin: 30px 0 10px 0;
@@ -135,7 +165,7 @@
     p {
       color: var(--secondary-text);
       font-size: clamp(16px, 5vw, 32px);
-       font-family: "Anta", sans-serif;
+      font-family: "Anta", sans-serif;
     }
 
     .info-section {
@@ -143,7 +173,6 @@
       align-items: center;
       justify-content: center;
       gap: 30px;
-      flex-wrap: wrap;
 
       .location {
         display: flex;
@@ -151,8 +180,6 @@
         align-items: center;
         gap: 15px;
         font-family: "Anta", sans-serif;
-
-      
 
         i {
           font-size: 30px;
@@ -218,8 +245,8 @@
             color 0.3s ease;
 
           &:hover {
-            transform: scale(1.2);
             color: var(--hover-color);
+            transform: scale(1.2) rotate(-5deg);
           }
 
           .fa-brands {
@@ -236,7 +263,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 15px;
-      font-size: x-large;
+
       color: var(--secondary-text);
 
       .wave-emoji {
