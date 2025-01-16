@@ -52,6 +52,11 @@
 }
 
 @media screen and (max-width: 580px) {
+  form {
+    .wrapper {
+      flex-direction: column;
+    }
+  }
   .cards__container .card {
     width: 75%;
     height: 600px;
@@ -81,6 +86,9 @@
 }
 
 @media screen and (max-width: 425px) {
+  h2 {
+    font-size: 2rem !important;
+  }
   .web,
   .mobile {
     display: flex;

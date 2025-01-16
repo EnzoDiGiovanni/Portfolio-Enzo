@@ -46,7 +46,7 @@
         title="Depuis quand je code ?"
         ,
         desc="J'ai décidé de changer complètement de domaine après 2 ans de marketing et d'apprendre le développement web !
-Aujourd'hui, ça fait 2 ans que je code en autodidacte et à l'école  👨🏽‍💻"
+Aujourd'hui, ça fait 2 ans que je code en autodidacte et à l'école 👨🏽‍💻"
       />
 
       <CardInfo
@@ -62,22 +62,6 @@ J'aime également apprendre toutes sortes de choses et sur n'importe quel sujet 
       />
     </div>
   </div>
-
-  <!-- <a href="https://github.com/EnzoDiGiovanni" target="_blank">
-    <button class="button">
-      GitHub <i class="fa-brands fa-square-github"></i>
-    </button>
-  </a> -->
-
-  <!-- <a href="https://www.linkedin.com/in/enzodigiovanni/" target="_blank">
-        <button class="button">
-          LinkedIn <i class="fa-brands fa-linkedin"></i>
-        </button>
-      </a> -->
-
-  <!-- <a class="button" href="/CV_Enzo_DG.pdf" download>
-      Mon CV <i class="fa-solid fa-file"></i>
-    </a> -->
 </section>
 
 <style lang="scss">
