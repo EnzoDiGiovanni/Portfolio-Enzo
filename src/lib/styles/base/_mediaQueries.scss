@@ -95,6 +95,11 @@
 }
 
 @media screen and (max-width: 435px) {
+  .home-page {
+    h1 {
+      margin-bottom: 50px !important;
+    }
+  }
   .info-section {
     flex-direction: column;
   }

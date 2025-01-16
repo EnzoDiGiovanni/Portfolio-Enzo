@@ -48,13 +48,13 @@
     <div class="side_nav {sideNavOpen ? 'open' : ''}">
       <ul class="nav_links">
         <li class:active={activeLink === "projets"}>
-          <a href="#projects" on:click={closeSideNav}> PROJETS </a>
+          <a href="/#projects" on:click={closeSideNav}> PROJETS </a>
         </li>
         <li class:active={activeLink === "competences"}>
-          <a href="#competence" on:click={closeSideNav}> COMPÉTENCES </a>
+          <a href="/#competence" on:click={closeSideNav}> COMPÉTENCES </a>
         </li>
         <li class:active={activeLink === "contact"}>
-          <a href="#contact" on:click={closeSideNav}> ME CONTACTER </a>
+          <a href="/#contact" on:click={closeSideNav}> ME CONTACTER </a>
         </li>
       </ul>
     </div>
@@ -103,25 +103,23 @@
         background: transparent;
         border: none;
         z-index: 10;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2) rotate(-5deg);
+        }
 
         .fa-compass {
           font-size: 50px;
           color: var(--button);
           animation: compass_spin 7s linear infinite;
           cursor: pointer;
-
-          &,
-          &::before {
-            shape-outside: circle(50%);
-            border-radius: 50%;
-          }
-
           transition:
             rotate 0.3s ease,
             color 0.3s ease;
 
           &:hover {
-            rotate: 360deg;
+            rotate: 200deg;
             font-weight: bold;
             color: var(--ring);
           }

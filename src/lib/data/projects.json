@@ -4,7 +4,6 @@
     "link": "/projects/APIREST",
     "desc": "Ma première API REST créée en GO / Postman ",
     "gitSrc": "https://github.com/EnzoDiGiovanni/Rest-API-Golang",
-
     "date": "2024",
     "imgSrc": "/images/restapi.png",
     "technos": ["Golang"],
@@ -14,7 +13,11 @@
       "API REST",
       "Postman"
     ],
-    "about": "J'ai créé cette première API REST en Go pour deux raisons : apprendre ce langage que je découvre et m'initier à la création d'API REST, afin de poser les bases pour développer des projets Back-End plus ambitieux."
+    "context": "Pour explorer un langage back-end qui me correspond, j'ai entrepris la création de mon tout premier projet en Go.",
+    "objective": "Ce projet vise à renforcer mes compétences en back-end. Dans mon parcours pour devenir full stack, je veux exceller dans ces deux domaines.",
+    "challenge": "Partant de zéro, j'ai suivi un tutoriel complet, en modifiant et expérimentant chaque étape pour m'approprier ce langage.",
+    "result": "Le projet aboutit à une API REST fonctionnelle en Go, permettant la gestion complète de livres avec les opérations CRUD : création, lecture, modification et suppression.",
+    "linkToFutur": "Je souhaite faire de Go mon langage back-end principal. Ce projet marque le début de mon objectif de devenir expert dans ce domaine."
   },
   "B2SEOMDS": {
     "title": "B2SEOMDS",
@@ -24,25 +27,13 @@
     "projectLink": "https://cheh.johan-janin.com/",
     "date": "2024",
     "imgSrc": "/images/b2seomds.webp",
-    "technos": ["Svelte"],
-    "tags": [
-      "Développement Front-End",
-      "Projet marketing digital",
-      "Seo",
-      "Postman"
-    ],
-    "about": "Ce challenge, initié par notre intervenant, consistait à atteindre la première position sur Google pour un mot-clé inexistant. L’objectif était d’être classé premier à une date précise, déterminant ainsi notre note finale. Avec mon équipe, nous avons tout optimisé via le code, notamment en utilisant le Markdown pour la rédaction des articles de blog, afin d’améliorer au maximum le référencement naturel. Nous avons choisi d’éviter WordPress, car son installation volumineuse impacte significativement les performances et les temps de chargement du site."
-  },
-  "pokedex": {
-    "title": "Pokédex",
-    "link": "/projects/pokedex",
-    "desc": "Pokédex créé en Svelte",
-    "gitSrc": "https://github.com/EnzoDiGiovanni/Pokedex-2.0",
-    "date": "2024",
-    "imgSrc": "/images/pokedex.webp",
     "technos": ["HTML", "CSS", "Svelte"],
-    "tags": ["Front-end", "Projet personnel", "API", "Développement web"],
-    "about": "Créer un Pokedex était le meilleur moyen pour moi d'apprendre à utiliser Svelte et les calls API. "
+    "tags": ["Développement Front-End", "Projet marketing digital", "Seo"],
+    "context": "Dans le cadre d'un projet de cours en Marketing Digital, nous devions concevoir un site optimisé pour être classé premier sur Google en termes de SEO sur un mot-clé inventé.",
+    "objective": "L’objectif était d’atteindre la première position sur Google afin d’obtenir la meilleure note possible.",
+    "challenge": "Avec mon équipe, nous avons réfléchi aux meilleures stratégies pour obtenir le meilleur résultat. Nous avons choisi de tout développer en code natif, car l’utilisation de WordPress, bien que pratique, réduit considérablement les performances du site.",
+    "result": "Nous avons remporté le défi malgré des problèmes d’URL rencontrés par d’autres équipes. Notre site a obtenu un score parfait de 100 sur Google PageSpeed Insights.",
+    "linkToFutur": "Ce projet m’a permis de mieux comprendre le SEO, un élément crucial dans la création de sites internet. Ces compétences me seront précieuses pour améliorer le classement des sites à l’avenir."
   },
   "myBookList": {
     "title": "My Book List",
@@ -53,6 +44,25 @@
     "imgSrc": "/images/booklist.png",
     "technos": ["Flutter"],
     "tags": ["Développement mobile", "Projet personnel", "GoogleBooks API"],
-    "about": "À la demande d’un proche, un ami et moi avons commencé à développer une application qui permet de gérer les livres à lire et ceux déjà lus. L’application propose également une fonctionnalité pour ajouter des livres à une wishList afin de les acheter plus tard, ainsi qu’une section de recherche connectée à l’API de Google pour enrichir la wishList."
+    "context": "À la demande d’un proche, j’ai décidé, avec un ami, de développer une application mobile répondant à ses besoins.",
+    "objective": "Cette application a pour objectif de permettre aux utilisateurs de gérer leurs livres : ceux lus, à lire, à acheter ou en cours de lecture. L’idée est de créer un espace unique dédié aux passionnés et adeptes de lecture.",
+    "challenge": "Le plus grand défi de ce projet, qui est à ce jour le plus ambitieux de mes réalisations, est l’apprentissage de Flutter. Bien que certaines similitudes existent avec les langages web, le développement mobile est un domaine distinct, riche en défis passionnants !",
+    "result": "Le projet est toujours en cours, mais il progresse bien. Nous prévoyons une sortie avant 2026.",
+    "linkToFutur": "Ce projet me permet d’acquérir de nouvelles compétences et d’explorer divers domaines. Je souhaite développer une expertise polyvalente, et le développement mobile en fait partie !"
+  },
+  "pokedex": {
+    "title": "Pokédex",
+    "link": "/projects/pokedex",
+    "desc": "Pokédex créé en Svelte",
+    "gitSrc": "https://github.com/EnzoDiGiovanni/Pokedex-2.0",
+    "date": "2024",
+    "imgSrc": "/images/pokedex.webp",
+    "technos": ["HTML", "CSS", "Svelte"],
+    "tags": ["Front-end", "Projet personnel", "API", "Développement web"],
+    "context": "Dans le cadre de mon apprentissage du développement web, j'ai décidé de créer un Pokédex pour approfondir mes compétences en JavaScript.",
+    "objective": "L’objectif principal était de me familiariser avec l’utilisation des API en JavaScript, en particulier avec la méthode `fetch`, tout en réalisant un projet amusant et interactif.",
+    "challenge": "Le principal défi a été de comprendre et manipuler les données reçues depuis une API. L’apprentissage de la structure JSON, notamment la distinction entre les objets et les tableaux, a été essentiel pour afficher correctement les informations des Pokémon.",
+    "result": "Le projet a été un succès, j'ai réussi à développer un Pokédex fonctionnel affichant les données des Pokémon avec une navigation fluide et une interface intuitive.",
+    "linkToFutur": "Ce projet m’a permis d’acquérir une base solide pour l’intégration d’API dans mes futurs projets. Ces compétences seront essentielles pour des projets plus complexes, notamment ceux nécessitant des échanges de données dynamiques."
   }
 }

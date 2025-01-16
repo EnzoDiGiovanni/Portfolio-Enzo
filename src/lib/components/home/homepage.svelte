@@ -157,7 +157,7 @@
       margin: 30px 0 10px 0;
 
       svg {
-        width: 80%;
+        width: 90%;
         height: 100px;
       }
     }
@@ -182,8 +182,24 @@
         font-family: "Anta", sans-serif;
 
         i {
-          font-size: 30px;
+          position: relative;
+          font-size: 2rem;
           color: var(--button);
+          animation: bounce 2.5s infinite ease-in-out;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: var(--button);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: pingDot 2.5s infinite ease-out;
+          }
         }
       }
 

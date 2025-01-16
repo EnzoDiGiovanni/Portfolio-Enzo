@@ -47,8 +47,27 @@
 
     <div class="wrapper-description">
       <div class="projectType">
-        <div class="description">
-          <p>{project.about}</p>
+        <div class="details-grid">
+          <div class="detail-item">
+            <h3>Contexte</h3>
+            <p>{project.context}</p>
+          </div>
+          <div class="detail-item">
+            <h3>Objectif</h3>
+            <p>{project.objective}</p>
+          </div>
+          <div class="detail-item">
+            <h3>Challenge</h3>
+            <p>{project.challenge}</p>
+          </div>
+          <div class="detail-item">
+            <h3>Résultat</h3>
+            <p>{project.result}</p>
+          </div>
+          <div class="detail-item">
+            <h3>Liens avec mon futur ?</h3>
+            <p>{project.linkToFutur}</p>
+          </div>
         </div>
         <ul>
           {#each project.tags as tag}
@@ -147,6 +166,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .wrapper {
@@ -177,7 +197,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 1px solid var(--border-separator);
+          border-left: 2px solid var(--border-separator);
           height: 100%;
           width: 100%;
           color: var(--secondary-text);
@@ -199,6 +219,53 @@
         flex-direction: column;
         width: 100%;
         margin-bottom: 80px;
+
+        .details-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          margin: 40px 0;
+          padding: 20px;
+          background-color: var(--ring);
+          border-radius: 15px;
+
+          .detail-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px 20px;
+
+            color: var(--high-contrast-text);
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+
+            &:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            h3 {
+              font-size: 1.6rem;
+              margin-bottom: 8px;
+              color: var(--high-contrast-text);
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            }
+
+            p {
+              font-size: 1rem;
+              line-height: 1.6;
+              color: var(--high-contrast-text);
+              margin-top: 5px;
+              padding: 10px;
+              background-color: rgba(255, 255, 255, 0.1);
+              border-radius: 8px;
+            }
+          }
+        }
 
         ul {
           display: flex;

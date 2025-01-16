@@ -88,7 +88,7 @@
       margin-bottom: 40px;
 
       h2 {
-        font-size: 2rem;
+        font-size: 3rem;
         color: var(--high-contrast-text);
       }
 

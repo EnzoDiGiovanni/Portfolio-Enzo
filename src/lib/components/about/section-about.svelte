@@ -88,6 +88,7 @@ J'aime également apprendre toutes sortes de choses et sur n'importe quel sujet 
       color: var(--high-contrast-text);
       text-align: center;
       margin-bottom: 100px;
+      font-size: 3rem;
     }
 
     .content-wrapper {

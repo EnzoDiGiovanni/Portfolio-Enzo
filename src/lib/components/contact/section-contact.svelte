@@ -21,7 +21,7 @@
         >Votre email : <input
           type="email"
           name="email"
-          placeholder="Di Giovanni"
+          placeholder="enzo.digiovanni@exemple.com"
           required
         /></label
       >
@@ -45,7 +45,7 @@
   h2 {
     color: var(--high-contrast-text);
     text-align: center;
-
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 3rem;
   }
