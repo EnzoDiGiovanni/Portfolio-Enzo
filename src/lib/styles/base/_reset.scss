@@ -15,8 +15,6 @@
   padding: 0;
   box-sizing: border-box;
 
-  outline: 1px solid violet;
-
   &::selection {
     color: var(--high-contrast-text);
     background-color: var(--interactive);

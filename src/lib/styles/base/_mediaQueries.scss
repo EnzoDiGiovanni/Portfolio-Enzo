@@ -23,6 +23,12 @@
       align-items: center !important;
       gap: 0 !important;
     }
+
+    .card-section {
+      &:has(.card:hover) .card:not(:hover) {
+        filter: none !important;
+      }
+    }
   }
 }
 
