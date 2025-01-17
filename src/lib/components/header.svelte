@@ -8,7 +8,6 @@
 
   const toggleSideNav = () => {
     sideNavOpen = !sideNavOpen;
-    document.body.style.overflow = sideNavOpen ? "hidden" : "";
   };
 
   const closeSideNav = () => {
