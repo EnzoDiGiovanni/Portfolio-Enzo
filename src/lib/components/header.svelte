@@ -151,11 +151,13 @@
         list-style: none;
         padding: 0;
         text-align: center;
+        width: 300px;
 
         li {
           margin: 20px 0;
           font-size: 24px;
           font-weight: bold;
+          width: 100%;
 
           a {
             color: var(--high-contrast-text);

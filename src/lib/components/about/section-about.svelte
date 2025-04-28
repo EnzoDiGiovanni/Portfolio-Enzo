@@ -24,7 +24,7 @@
     <div class="profile-image">
       <img
         class="profile-picture"
-        src="/images/profilpic.webp"
+        src="/images/pp.webp"
         loading="lazy"
         alt="Profil d'Enzo Di Giovanni"
       />
@@ -85,6 +85,7 @@ J'aime également apprendre toutes sortes de choses et sur n'importe quel sujet 
 
         .profile-picture {
           width: 100%;
+          border-radius: 540% 300% 0 0;
           mask-image: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 1) 70%,

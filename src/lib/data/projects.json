@@ -1,4 +1,24 @@
 {
+  "HoraFacture": {
+    "title": "Hora-Facture",
+    "link": "/projects/HoraFacture",
+    "desc": "Outil de génération de facture par lien Ical",
+    "gitSrc": "https://github.com/EnzoDiGiovanni/Hora-Facture",
+    "date": "2025",
+    "imgSrc": "/images/horafacture.png",
+    "technos": ["Laravel"],
+    "tags": [
+      "Développement Back-End",
+      "Projet de spécialité",
+      "Application Web",
+      "API"
+    ],
+    "context": "Dans le cadre de ma formation pour un projet de spécialité, j'ai développé un projet complet nommé Hora Facture, une application de gestion de factures pour freelances et indépendants.",
+    "objective": "Mon objectif était de créer une application Laravel robuste et moderne, tout en améliorant mes compétences full-stack, notamment en back-end PHP et en intégration front-end avec TailwindCSS.",
+    "challenge": "Le projet a été entièrement conçu en autonomie : création de toutes les pages (clients, factures, dashboard), intégration d'une API externe pour importer des événements d'un calendrier iCal, mise en place de règles de sécurité par utilisateur, et gestion des relations complexes entre utilisateurs, clients, factures et lignes de factures.",
+    "result": "Hora Facture est une application fonctionnelle permettant la création, la visualisation, la modification et la suppression de clients et de factures, avec génération automatique de lignes de factures à partir d'événements iCal, affichage dynamique de statistiques sur le dashboard, et une interface responsive en dark/light mode.",
+    "linkToFutur": "Ce projet m'a permis de perfectionner mes bases en Laravel et Tailwind, et me prépare pour des projets plus ambitieux en full-stack, notamment avec la volonté d'intégrer des fonctionnalités plus avancées comme des exports PDF et des systèmes de paiement en ligne."
+  },
   "APIREST": {
     "title": "API REST",
     "link": "/projects/APIREST",
@@ -17,7 +37,7 @@
     "objective": "Ce projet vise à renforcer mes compétences en back-end. Dans mon parcours pour devenir full stack, je veux exceller dans ces deux domaines.",
     "challenge": "Partant de zéro, j'ai suivi un tutoriel complet, en modifiant et expérimentant chaque étape pour m'approprier ce langage.",
     "result": "Le projet aboutit à une API REST fonctionnelle en Go, permettant la gestion complète de livres avec les opérations CRUD : création, lecture, modification et suppression.",
-    "linkToFutur": "Je souhaite faire de Go mon langage back-end principal. Ce projet marque le début de mon objectif de devenir expert dans ce domaine."
+    "linkToFutur": "Par curiosité et dans un esprit d'apprentissage, j'ai voulu tester Go, sans intention de l'utiliser comme langage back-end principal."
   },
   "B2SEOMDS": {
     "title": "B2SEOMDS",
@@ -34,21 +54,6 @@
     "challenge": "Avec mon équipe, nous avons réfléchi aux meilleures stratégies pour obtenir le meilleur résultat. Nous avons choisi de tout développer en code natif, car l’utilisation de WordPress, bien que pratique, réduit considérablement les performances du site.",
     "result": "Nous avons remporté le défi malgré des problèmes d’URL rencontrés par d’autres équipes. Notre site a obtenu un score parfait de 100 sur Google PageSpeed Insights.",
     "linkToFutur": "Ce projet m’a permis de mieux comprendre le SEO, un élément crucial dans la création de sites internet. Ces compétences me seront précieuses pour améliorer le classement des sites à l’avenir."
-  },
-  "myBookList": {
-    "title": "My Book List",
-    "link": "/projects/myBookList",
-    "desc": "Application mobile pour les amateurs de livres !",
-    "gitSrc": "https://github.com/EnzoDiGiovanni/MyBookList",
-    "date": "2024",
-    "imgSrc": "/images/booklist.png",
-    "technos": ["Flutter"],
-    "tags": ["Développement mobile", "Projet personnel", "GoogleBooks API"],
-    "context": "À la demande d’un proche, j’ai décidé, avec un ami, de développer une application mobile répondant à ses besoins.",
-    "objective": "Cette application a pour objectif de permettre aux utilisateurs de gérer leurs livres : ceux lus, à lire, à acheter ou en cours de lecture. L’idée est de créer un espace unique dédié aux passionnés et adeptes de lecture.",
-    "challenge": "Le plus grand défi de ce projet, qui est à ce jour le plus ambitieux de mes réalisations, est l’apprentissage de Flutter. Bien que certaines similitudes existent avec les langages web, le développement mobile est un domaine distinct, riche en défis passionnants !",
-    "result": "Le projet est toujours en cours, mais il progresse bien. Nous prévoyons une sortie avant 2026.",
-    "linkToFutur": "Ce projet me permet d’acquérir de nouvelles compétences et d’explorer divers domaines. Je souhaite développer une expertise polyvalente, et le développement mobile en fait partie !"
   },
   "pokedex": {
     "title": "Pokédex",
