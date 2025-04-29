@@ -1,111 +1,157 @@
 <script>
   import { onMount } from "svelte";
-  import CardInfo from "./about-card.svelte";
 
   onMount(async () => {
     if (typeof window !== "undefined") {
       const ScrollReveal = (await import("scrollreveal")).default;
 
-      ScrollReveal().reveal(".profile-image", {
-        duration: 1000,
+      ScrollReveal().reveal(".about-left", {
+        duration: 1200,
+        origin: "left",
+        distance: "80px",
+        easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
+      });
+
+      ScrollReveal().reveal(".about-item", {
+        duration: 1200,
         origin: "bottom",
-        distance: "50px",
+        distance: "60px",
+        easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
         opacity: 0,
-        easing: "ease-in-out",
+        beforeReveal: (el) => {
+          el.classList.add("active"); // 👉 ajoute la classe .active sur apparition
+        },
       });
     }
   });
 </script>
 
 <section class="about-section">
-  <h2>À propos de moi !</h2>
+  <h2>À propos</h2>
 
-  <div class="content-wrapper">
-    <div class="profile-image">
-      <img
-        class="profile-picture"
-        src="/images/pp.webp"
-        loading="lazy"
-        alt="Profil d'Enzo Di Giovanni"
-      />
+  <div class="about-wrapper">
+    <div class="about-left">
+      <img src="/images/pp.png" alt="Enzo Di Giovanni" loading="lazy" />
     </div>
 
-    <div class="info-cards">
-      <CardInfo
-        title="Bonjour, je m'appelle Enzo Di Giovanni"
-        ,
-        desc="Un futur développeur Full-Stack ! ☄️"
-      />
-      <CardInfo
-        title="Depuis quand je code ?"
-        ,
-        desc="J'ai décidé de changer complètement de domaine après 2 ans de marketing et d'apprendre le développement web !
-Aujourd'hui, ça fait 2 ans que je code en autodidacte et à l'école 👨🏽‍💻"
-      />
+    <div class="about-right">
+      <div class="about-item">
+        <h3>Qui suis-je ?</h3>
+        <p>
+          Je m'appelle Enzo Di Giovanni, passionné de développement web, futur
+          développeur full-stack !
+        </p>
+      </div>
 
-      <CardInfo
-        title="Ce que j'aime dans la vie ?"
-        ,
-        desc="J'adore le ski et les sports de combat ⛷️ 🤼
-J'aime également apprendre toutes sortes de choses et sur n'importe quel sujet ! 🧠 "
-      />
-      <CardInfo
-        title="Qu'est-ce que j'ai en plus ?"
-        ,
-        desc="Je suis soucieux d'apprendre et de bien faire, je m'efforce chaque jour de proposer la meilleure version de moi-même ! 💪🏽 "
-      />
+      <div class="about-item">
+        <h3>Mon parcours</h3>
+        <p>
+          Après deux ans dans le marketing, j'ai décidé de changer de voie pour
+          apprendre le développement en autodidacte puis en école. Aujourd'hui,
+          cela fait plus de 2 ans que je code chaque jour !
+        </p>
+      </div>
+
+      <div class="about-item">
+        <h3>Mes passions</h3>
+        <p>
+          Le ski, les sports de combat, et apprendre en continu sur des sujets
+          variés !
+        </p>
+      </div>
+
+      <div class="about-item">
+        <h3>Mes valeurs</h3>
+        <p>
+          Rigueur, persévérance et envie d'améliorer mes compétences chaque jour
+          pour donner le meilleur de moi-même.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
 <style lang="scss">
   .about-section {
-    min-height: 100vh;
+    padding: 8rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
 
     h2 {
-      color: var(--high-contrast-text);
-      text-align: center;
-      margin-bottom: 100px;
       font-size: 3rem;
+      text-align: center;
+      margin-bottom: 5rem;
+      color: var(--high-contrast-text);
     }
 
-    .content-wrapper {
-      position: relative;
+    .about-wrapper {
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 25%;
+      gap: 4rem;
+      flex-wrap: wrap;
 
-      .profile-image {
-        position: sticky;
-        top: 35%;
-        left: 0;
-        height: 100%;
-        width: 300px;
-        overflow: hidden;
+      .about-left {
+        flex: 1;
+        min-width: 280px;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
 
-        .profile-picture {
+        img {
           width: 100%;
-          border-radius: 540% 300% 0 0;
-          mask-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 1) 70%,
-            rgba(0, 0, 0, 0) 100%
-          );
-          -webkit-mask-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 1) 70%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          height: auto;
+          border-radius: 20px;
+          object-fit: cover;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
       }
 
-      .info-cards {
-        margin-top: 200px;
+      .about-right {
+        flex: 2;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        gap: 400px;
+        gap: 2rem;
+
+        .about-item {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid var(--ring);
+          padding: 2rem;
+          border-radius: 16px;
+          transition:
+            transform 0.5s ease,
+            background 0.5s ease;
+          transform: translateY(0);
+
+          h3 {
+            font-size: 1.8rem;
+            color: var(--high-contrast-text);
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--secondary-text);
+          }
+
+          &.active {
+            transform: translateY(-5px);
+            background: var(--button);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        .about-left,
+        .about-right {
+          max-width: 100%;
+        }
       }
     }
   }

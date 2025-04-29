@@ -5,7 +5,6 @@ import { error } from "@sveltejs/kit";
 export function load({ params }) {
   const { slug } = params;
 
-  // Récupérer le projet correspondant au slug
   const project = projects[slug];
 
   if (!project) {

@@ -11,18 +11,17 @@
   onMount(async () => {
     if (typeof window !== "undefined") {
       const ScrollReveal = (await import("scrollreveal")).default;
-
       ScrollReveal().reveal(".projects-header", {
         duration: 1000,
         origin: "bottom",
-        distance: "1000px",
-        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+        distance: "100px",
+        easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
       });
       ScrollReveal().reveal(".projects-filter", {
-        duration: 1500,
+        duration: 1200,
         origin: "bottom",
-        distance: "1000px",
-        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+        distance: "100px",
+        easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
       });
     }
   });
@@ -30,44 +29,28 @@
 
 <section id="projects" class="projects-section">
   <header class="projects-header">
-    <h2>Projets</h2>
-    <p>
-      Découvrez mes projets avec les différentes technologies/langages que
-      j'aime utiliser !
-    </p>
-    <a href="https://github.com/EnzoDiGiovanni?tab=repositories" target="_blank"
-      ><button class="allProjects">Voir tous mes projets</button></a
+    <h2>Mes Projets</h2>
+    <p>Découvrez mes réalisations basées sur mes technos favorites.</p>
+    <a
+      href="https://github.com/EnzoDiGiovanni?tab=repositories"
+      target="_blank"
     >
+      <button class="all-projects">Voir tous les projets</button>
+    </a>
   </header>
 
   <div class="projects-filter">
-    <ul>
-      <li>
-        <button
-          type="button"
-          on:click={() => (selectedTech = "")}
-          class:selected={selectedTech === ""}
-        >
-          Tous
-        </button>
-      </li>
+    <select bind:value={selectedTech}>
+      <option value="">Tous</option>
       {#each allTechnos as tech}
-        <li>
-          <button
-            type="button"
-            on:click={() => (selectedTech = tech)}
-            class:selected={selectedTech === tech}
-          >
-            {tech}
-          </button>
-        </li>
+        <option value={tech}>{tech}</option>
       {/each}
-    </ul>
+    </select>
   </div>
 
   <div class="projects-grid">
     {#each Object.values(projects).filter((proj) => !selectedTech || proj.technos.includes(selectedTech)) as project}
-      <a href={project.link} aria-label={`Détails du projet ${project.title}`}>
+      <a href={project.link} aria-label={`Accéder au projet ${project.title}`}>
         <ProjectCard
           title={project.title}
           desc={project.desc}
@@ -80,106 +63,98 @@
 
 <style lang="scss">
   .projects-section {
-    margin: 130px auto;
-    padding: 0 20px;
+    margin: 8rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
 
     .projects-header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 4rem;
 
       h2 {
         font-size: 3rem;
+        font-weight: bold;
         color: var(--high-contrast-text);
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         color: var(--secondary-text);
-        margin: 30px 0;
+        margin-top: 1.5rem;
       }
 
-      .allProjects {
-        cursor: pointer;
-        padding: 10px;
+      .all-projects {
+        margin-top: 2rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--button);
+        color: var(--high-contrast-text);
         border: 1px solid var(--ring);
-        background-color: var(--button);
-        border-radius: 20px;
-        color: var(--interactive);
-        transition:
-          transform 0.3s ease,
-          color 0.3s ease;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: all 0.3s ease;
 
         &:hover {
-          transform: scale(1.1);
+          transform: translateY(-4px);
+          background: var(--interactive);
           color: var(--high-contrast-text);
+          cursor: pointer;
         }
       }
     }
 
     .projects-filter {
-      border: 1px solid var(--ring);
-      border-radius: 8px;
-      margin: 20px auto;
-      padding: 15px;
+      margin-bottom: 3rem;
       text-align: center;
 
-      ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        list-style: none;
-        gap: 10px;
-        padding: 0;
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
 
-        li {
-          button {
-            background-color: transparent;
-            border: 1px solid var(--ring);
-            color: var(--secondary-text);
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        background: linear-gradient(
+          135deg,
+          var(--background),
+          rgba(255, 255, 255, 0.03)
+        );
+        border: 1px solid var(--ring);
+        border-radius: 12px;
+        color: var(--high-contrast-text);
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        position: relative;
 
-            &.selected {
-              background-color: var(--background);
-              color: var(--high-contrast-text);
-              border-color: var(--background);
-              transform: scale(1.1);
-            }
+        &:hover {
+          background: var(--button);
+          color: var(--background);
+          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+          border-color: var(--hover-color);
+        }
 
-            &:hover {
-              background-color: var(--button);
-
-              transform: scale(1.1);
-            }
-          }
+        &:focus {
+          outline: none;
+          border-color: var(--ring);
+          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
         }
       }
     }
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
 
       a {
         text-decoration: none;
         transition: transform 0.3s ease;
 
         &:hover {
-          transform: scale(1.05);
+          transform: scale(1.03);
         }
-      }
-
-      @media (max-width: 768px) {
-        grid-template-columns: repeat(1, minmax(250px, 1fr));
-      }
-
-      @media (max-width: 480px) {
-        gap: 10px;
-        grid-template-columns: 1fr;
       }
     }
   }

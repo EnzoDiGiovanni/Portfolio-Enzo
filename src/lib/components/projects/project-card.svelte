@@ -21,100 +21,88 @@
   onMount(async () => {
     if (typeof window !== "undefined") {
       const ScrollReveal = (await import("scrollreveal")).default;
-
       ScrollReveal().reveal(".anim-r", {
-        duration: 1300,
+        duration: 1200,
         origin: "bottom",
-        distance: "1000px",
-        easing: "cubic-bezier( 0.6, 0.2, 0.1, 1 )",
+        distance: "80px",
+        easing: "cubic-bezier(0.6, 0.2, 0.1, 1)",
       });
     }
   });
 </script>
 
 <div class="card anim-r" style:--bg={color}>
-  <div class="card-title">
-    <h2>{title}</h2>
-    <p>{desc}</p>
-  </div>
-
-  <div class="card-img">
-    <img src={imgSrc} alt="" />
+  <div class="card-content">
+    <div class="card-img">
+      <img src={imgSrc} alt={title} />
+    </div>
+    <div class="card-info">
+      <h2>{title}</h2>
+      <p>{desc}</p>
+    </div>
   </div>
 </div>
 
 <style lang="scss">
   .card {
     position: relative;
+    background: var(--background);
+    border: 1px solid var(--ring);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    color: white;
-    border: 1px solid var(--border-separator);
-    height: 720px;
-    z-index: 2;
-    border-radius: 10px;
 
-    &::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 0;
-      border-radius: 10px;
-      background: var(--bg);
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: all 0.7s ease-in-out;
-      z-index: -1;
+    &:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
-    .card-title {
-      h2 {
-        color: var(--high-contrast-text);
-        margin-top: 30px;
-        text-align: center;
-      }
-
-      p {
-        color: var(--secondary-text);
-        text-align: center;
-        margin-bottom: 30px;
-      }
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top right, var(--bg), transparent 70%);
     }
 
     .card-img {
-      width: 60%;
-      height: 60%;
-      transition: all 0.7s ease-in-out;
-      padding: 60px;
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 1rem;
 
       img {
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
-        transition: all 0.5s ease-in-out;
+        max-width: 100%;
+        max-height: 180px;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
       }
     }
 
-    &:hover {
-      &::before {
-        height: 100%;
-      }
-      .card-img {
-        width: 90%;
-        height: 70%;
+    .card-info {
+      flex: none;
+      margin-top: 1rem;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--high-contrast-text);
       }
 
-      img {
-        transform: scale(1.2);
-        width: 100%;
-        height: 100%;
+      p {
+        font-size: 1rem;
+        color: var(--secondary-text);
       }
     }
   }

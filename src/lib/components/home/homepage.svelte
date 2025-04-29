@@ -113,7 +113,7 @@
   </section>
 
   <section class="profile-section">
-    <p class="role .sr-hidden">Développeur Web</p>
+    <p class="role .sr-hidden">Développeur Web Full-Stack</p>
     <div class="social-links">
       <a
         href="https://www.linkedin.com/in/enzodigiovanni/"

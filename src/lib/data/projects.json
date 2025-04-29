@@ -6,12 +6,13 @@
     "gitSrc": "https://github.com/EnzoDiGiovanni/Hora-Facture",
     "date": "2025",
     "imgSrc": "/images/horafacture.png",
-    "technos": ["Laravel"],
+    "technos": ["Laravel", "Tailwind", "Sqlite"],
     "tags": [
       "Développement Back-End",
       "Projet de spécialité",
       "Application Web",
-      "API"
+      "API",
+      "BDD"
     ],
     "context": "Dans le cadre de ma formation pour un projet de spécialité, j'ai développé un projet complet nommé Hora Facture, une application de gestion de factures pour freelances et indépendants.",
     "objective": "Mon objectif était de créer une application Laravel robuste et moderne, tout en améliorant mes compétences full-stack, notamment en back-end PHP et en intégration front-end avec TailwindCSS.",
@@ -19,26 +20,27 @@
     "result": "Hora Facture est une application fonctionnelle permettant la création, la visualisation, la modification et la suppression de clients et de factures, avec génération automatique de lignes de factures à partir d'événements iCal, affichage dynamique de statistiques sur le dashboard, et une interface responsive en dark/light mode.",
     "linkToFutur": "Ce projet m'a permis de perfectionner mes bases en Laravel et Tailwind, et me prépare pour des projets plus ambitieux en full-stack, notamment avec la volonté d'intégrer des fonctionnalités plus avancées comme des exports PDF et des systèmes de paiement en ligne."
   },
-  "APIREST": {
-    "title": "API REST",
-    "link": "/projects/APIREST",
-    "desc": "Ma première API REST créée en GO / Postman ",
-    "gitSrc": "https://github.com/EnzoDiGiovanni/Rest-API-Golang",
-    "date": "2024",
-    "imgSrc": "/images/restapi.png",
-    "technos": ["Golang"],
+  "Etaps": {
+    "title": "Etaps - LLCO",
+    "link": "/projects/Etaps",
+    "desc": "Projet fil rouge",
+    "gitSrc": "https://github.com/EnzoDiGiovanni/ETAPS",
+    "date": "2025",
+    "imgSrc": "/images/etaps.webp",
+    "technos": ["HTML", "SCSS", "php", "JavaScript", "MySql"],
     "tags": [
-      "Développement Back-End",
-      "Projet personnel",
-      "API REST",
-      "Postman"
+      "Développement Full-Stack",
+      "Projet fil rouge",
+      "Application Web",
+      "BDD"
     ],
-    "context": "Pour explorer un langage back-end qui me correspond, j'ai entrepris la création de mon tout premier projet en Go.",
-    "objective": "Ce projet vise à renforcer mes compétences en back-end. Dans mon parcours pour devenir full stack, je veux exceller dans ces deux domaines.",
-    "challenge": "Partant de zéro, j'ai suivi un tutoriel complet, en modifiant et expérimentant chaque étape pour m'approprier ce langage.",
-    "result": "Le projet aboutit à une API REST fonctionnelle en Go, permettant la gestion complète de livres avec les opérations CRUD : création, lecture, modification et suppression.",
-    "linkToFutur": "Par curiosité et dans un esprit d'apprentissage, j'ai voulu tester Go, sans intention de l'utiliser comme langage back-end principal."
+    "context": "Dans le cadre du projet fil rouge organisé chaque année par My Digital School, deux camarades de classe et moi avons eu pour mission de répondre aux besoins d’un client réel qui nous a été attribué.",
+    "objective": "L’objectif de ce cours est de développer nos compétences en étant mis au défi sur un projet concret. Nous devions concevoir une application autonome permettant à un éducateur sportif de gérer des courses d’orientation pour enfants sans connexion internet, avec enregistrement des départs et arrivées, attribution de points, gestion des niveaux et affichage d’un classement en temps réel.",
+    "challenge": "Le projet a été entièrement réalisé en PHP natif afin de me permettre de progresser. C’était un véritable défi, mais face à mon besoin urgent de m’améliorer dans ce langage, mon collègue et moi avons décidé d’un commun accord de l’effectuer en PHP natif, malgré mes lacunes initiales.",
+    "result": "ETAPS - LLCO est un projet complet et fonctionnel",
+    "linkToFutur": "Souhaitant adopter Laravel comme stack principale pour le back end, développer cette application en PHP natif a été un véritable atout dans mon apprentissage. Cela m’a permis de mieux comprendre les fondamentaux de PHP et le fonctionnement global d’un back end."
   },
+
   "B2SEOMDS": {
     "title": "B2SEOMDS",
     "link": "/projects/B2SEOMDS",

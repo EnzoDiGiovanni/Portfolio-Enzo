@@ -47,33 +47,32 @@
 
     <div class="wrapper-description">
       <div class="projectType">
-        <div class="details-grid">
-          <div class="detail-item">
-            <h3>Contexte</h3>
-            <p>{project.context}</p>
-          </div>
-          <div class="detail-item">
-            <h3>Objectif</h3>
-            <p>{project.objective}</p>
-          </div>
-          <div class="detail-item">
-            <h3>Challenge</h3>
-            <p>{project.challenge}</p>
-          </div>
-          <div class="detail-item">
-            <h3>Résultat</h3>
-            <p>{project.result}</p>
-          </div>
-          <div class="detail-item">
-            <h3>Liens avec mon futur ?</h3>
-            <p>{project.linkToFutur}</p>
-          </div>
+        <div class="line-block">
+          <h4>Contexte</h4>
+          <p>{project.context}</p>
         </div>
-        <ul>
+        <div class="line-block">
+          <h4>Objectif</h4>
+          <p>{project.objective}</p>
+        </div>
+        <div class="line-block">
+          <h4>Challenge</h4>
+          <p>{project.challenge}</p>
+        </div>
+        <div class="line-block">
+          <h4>Résultat</h4>
+          <p>{project.result}</p>
+        </div>
+        <div class="line-block">
+          <h4>Projection</h4>
+          <p>{project.linkToFutur}</p>
+        </div>
+
+        <div class="tags">
           {#each project.tags as tag}
-            <li>| {tag} |</li>
+            <span>{tag}</span>
           {/each}
-        </ul>
+        </div>
       </div>
     </div>
   {:else}
@@ -206,76 +205,59 @@
     }
 
     .wrapper-description {
-      margin-top: 70px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      margin-top: 6rem;
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--ring);
 
       .projectType {
+        max-width: 1000px;
+        margin: 0 auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        width: 100%;
-        margin-bottom: 80px;
+        gap: 2.5rem;
 
-        .details-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          margin: 40px 0;
-          padding: 20px;
-          background-color: var(--ring);
-          border-radius: 15px;
+        .line-block {
+          display: grid;
+          grid-template-columns: 150px 1fr;
+          gap: 2rem;
+          align-items: start;
 
-          .detail-item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 15px 20px;
+          @media (max-width: 700px) {
+            grid-template-columns: 1fr;
+          }
 
+          h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
             color: var(--high-contrast-text);
-            border-radius: 10px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            transition:
-              transform 0.3s ease,
-              box-shadow 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+          }
 
-            &:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            }
-
-            h3 {
-              font-size: 1.6rem;
-              margin-bottom: 8px;
-              color: var(--high-contrast-text);
-              text-transform: uppercase;
-              letter-spacing: 0.5px;
-            }
-
-            p {
-              font-size: 1rem;
-              line-height: 1.6;
-              color: var(--high-contrast-text);
-              margin-top: 5px;
-              padding: 10px;
-              background-color: rgba(255, 255, 255, 0.1);
-              border-radius: 8px;
-            }
+          p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--secondary-text);
+            margin: 0;
           }
         }
 
-        ul {
+        .tags {
           display: flex;
           flex-wrap: wrap;
-          align-items: center;
+          gap: 0.6rem;
+          margin-top: 2rem;
           justify-content: center;
 
-          gap: 20px;
-          li {
-            color: var(--secondary-text);
+          span {
+            background: var(--ring);
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            color: var(--high-contrast-text);
+            border-radius: 9999px;
+            font-weight: 500;
+            border: 1px solid var(--border-separator);
           }
         }
       }
