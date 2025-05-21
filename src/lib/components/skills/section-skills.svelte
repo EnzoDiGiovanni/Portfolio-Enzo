@@ -22,8 +22,12 @@
           <span>JavaScript</span>
         </div>
         <div class="skill-item">
-          <img src="/images/angular.webp" alt="Angular" />
-          <span>Angular</span>
+          <img src="/images/svelte.webp" alt="Angular" />
+          <span>Svelte</span>
+        </div>
+        <div class="skill-item">
+          <img src="/images/vue.webp" alt="Angular" />
+          <span>Vue</span>
         </div>
       </div>
     </div>
@@ -56,6 +60,10 @@
         <div class="skill-item">
           <img src="/images/vscode.webp" alt="VS Code" />
           <span>VS Code</span>
+        </div>
+        <div class="skill-item">
+          <img src="/images/phpstorm.webp" alt="VS Code" />
+          <span>Php Storm</span>
         </div>
         <div class="skill-item">
           <img src="/images/postman.webp" alt="Postman" />

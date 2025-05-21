@@ -5,7 +5,6 @@
       <p>Développeur Web full-stack</p>
     </div>
     <div class="footer-right">
-      <a href="mailto:digiovannienzo1@gmail.com">digiovannienzo1@gmail.com</a>
       <span>&copy; 2024 — Tous droits réservés</span>
     </div>
   </div>

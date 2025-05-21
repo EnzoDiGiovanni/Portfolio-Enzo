@@ -68,7 +68,7 @@
       padding: 2rem;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to top right, var(--bg), transparent 70%);
+      background: linear-gradient(to top right, var(--bg), transparent 50%);
     }
 
     .card-img {
